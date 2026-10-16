@@ -1,0 +1,74 @@
+{
+  "_README": [
+    "Your synchrotron and neutron campaigns.",
+    "",
+    "This single file feeds two places: the timeline on the Research page, and the",
+    "'synchrotron campaigns' number on the home page. Add a campaign here and both",
+    "update by themselves.",
+    "",
+    "TO ADD ONE: copy a block, put it at the TOP (newest first), fill it in.",
+    "  when      short label, e.g. 'Mar 2027'",
+    "  facility  e.g. 'ESRF ID27'",
+    "  what      the technique or purpose",
+    "  code      proposal number (optional - leave \"\" if none)",
+    "  url       the facility's website (optional) — the facility name becomes a link"
+  ],
+  "campaigns": [
+    {
+      "when": "Feb 2026",
+      "facility": "ESRF ID14",
+      "what": "Mössbauer spectroscopy",
+      "code": "ES-1817",
+      "url": "https://www.esrf.fr/"
+    },
+    {
+      "when": "Jul 2025",
+      "facility": "ESRF BM18",
+      "what": "Phase-contrast micro-CT",
+      "code": "ES-1647",
+      "url": "https://www.esrf.fr/"
+    },
+    {
+      "when": "Apr 2025",
+      "facility": "ESRF ID27",
+      "what": "HP–HT falling-sphere viscometry",
+      "code": "ES-1631",
+      "url": "https://www.esrf.fr/"
+    },
+    {
+      "when": "Oct 2024",
+      "facility": "SOLEIL PSICHE",
+      "what": "HP–HT falling-sphere viscometry",
+      "code": "",
+      "url": "https://www.synchrotron-soleil.fr/en"
+    },
+    {
+      "when": "Mar 2020",
+      "facility": "J-PARC PLANET",
+      "what": "HP–HT neutron diffraction",
+      "code": "",
+      "url": "https://j-parc.jp/c/en/"
+    },
+    {
+      "when": "Jan 2020",
+      "facility": "SPring-8 BL35XU",
+      "what": "Inelastic X-ray scattering",
+      "code": "2019B1323",
+      "url": "http://www.spring8.or.jp/en/"
+    },
+    {
+      "when": "Jan 2020",
+      "facility": "SPring-8 BL10XU",
+      "what": "HP–HT X-ray diffraction",
+      "code": "2019B1323",
+      "url": "http://www.spring8.or.jp/en/"
+    },
+    {
+      "when": "Dec 2018",
+      "facility": "ESRF ID18",
+      "what": "Mössbauer spectroscopy",
+      "code": "ES-884",
+      "url": "https://www.esrf.fr/"
+    }
+  ]
+}

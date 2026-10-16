@@ -1,0 +1,221 @@
+{
+  "_README": [
+    "This is the only file you edit to update your publications.",
+    "",
+    "TO ADD A NEW PAPER:",
+    "  1. Add an entry to the 'papers' list below. Copy an existing one and change it.",
+    "     'id' must be unique - use lastname+year, e.g. 'abeykoon2027'.",
+    "  2. Put the DOI in 'doi' - just the bare DOI, e.g. 10.1029/2023JB026710",
+    "     The site turns it into a working link automatically. 'url' is only for",
+    "     papers with no DOI; leave it empty otherwise.",
+    "  3. Add the same id to the 'papers' list of whichever theme it belongs to.",
+    "  4. Save. Nothing else needs changing.",
+    "",
+    "Your own name is highlighted automatically wherever it appears.",
+    "Themes show in the order listed here; the archive is sorted newest first."
+  ],
+  "themes": [
+    {
+      "label": "Theme one",
+      "title": "Deep inside: metal, sulphur and the fluids that move things",
+      "summary": "Sulphur is a quiet, ordinary element that turns out to control a great deal. Down where the Earth's mantle meets its core, it decides which metals stay behind and which sink with it, and it leaves traces inside diamonds as trapped inclusions that we can read as a thermometer. Much shallower, in the upper mantle and the crust, water and other fluids move upward through rock in ways that are very hard to observe directly.\n\nThis was the work of my doctorate and the years around it. Much of it meant recreating the conditions rather than finding them: a new way to trap and read a fluid, using a trap made from a pair of single-crystal diamonds; a new geothermometer from the oxygen inside sulphide inclusions; and a neutron beam in Japan aimed at iron sulphide to find out where hydrogen actually sits inside it at high pressure and temperature.",
+      "papers": [
+        "abeykoon2023jgr",
+        "abeykoon2023cmp",
+        "abeykoon2022",
+        "blanchard2021"
+      ],
+      "short": "Deep Earth"
+    },
+    {
+      "label": "Theme two",
+      "title": "How magma flows, and why that decides everything",
+      "summary": "Whether a volcano flows or explodes comes down, to a surprising degree, to how sticky its magma is. Viscosity governs how fast melt rises, whether gas can escape gently or builds until the rock shatters, and therefore what an eruption does to the people living near it.\n\nMeasuring it is harder than it sounds, because the thing you want to measure changes while you measure it. A lot of this work has been about the method itself — calibrating a calorimetric approach so that different laboratories get the same answer, and tying viscosity to the actual atomic structure of the melt. The volcanoes involved are ones with history: Campi Flegrei, Colli Albani, Etna.",
+      "papers": [
+        "abeykoon2026jgr",
+        "stopponi2026",
+        "giuliani2025",
+        "digenova2025",
+        "fanesi2025"
+      ],
+      "short": "Magma"
+    },
+    {
+      "label": "Theme three",
+      "title": "Crystals, textures and the moment an eruption turns",
+      "summary": "Magma is rarely a simple liquid. It carries crystals, and those crystals grow, dissolve and rearrange as it rises - changing how the whole mixture behaves on timescales short enough to matter during an eruption.\n\nThis work looks at how quickly crystals appear, what delays them, and what the resulting textures can tell us afterwards. Some of it is done in real time at a synchrotron, watching a sample as it changes rather than examining it after the fact.",
+      "papers": [
+        "bonechi2026",
+        "califano2026"
+      ],
+      "short": "Crystals and textures"
+    },
+    {
+      "label": "Theme four",
+      "title": "Seeing small",
+      "summary": "A recurring thread through all of it: finding ways to look at things that are too small, too fast, or too deep to observe by ordinary means. Sometimes that means adapting an electron microscope to reveal individual defects in a crystal; sometimes it means building a new sample assembly so an experiment survives the pressure at all.",
+      "papers": [
+        "miyajima2018"
+      ],
+      "short": "Seeing small"
+    },
+    {
+      "label": "Earlier work",
+      "title": "Water, land and the people who depend on them",
+      "summary": "Before the deep Earth, there was water. My earliest research was environmental geochemistry in Sri Lanka and South India - tracing how seawater intrudes into a coastal aquifer, following trace elements through suburban waterways, and contributing to the long, difficult question of the kidney disease of uncertain origin affecting farming communities in Sri Lanka's dry zone.\n\nIt is a different field from the one I work in now, but not a different instinct. It was the same question asked at the surface: what is moving through this rock, and what does it mean for what lives on top of it?",
+      "papers": [
+        "joshua2018",
+        "guruge2017",
+        "diyabalanage2016",
+        "chandrajith2014"
+      ],
+      "short": "Water and people"
+    }
+  ],
+  "papers": [
+    {
+      "id": "abeykoon2026jgr",
+      "title": "Viscosity of trachytic melt constrained by integrated rheological and in situ spectroscopic analyses: Insights from the Agnano-Monte Spina eruption (Campi Flegrei, Italy)",
+      "authors": "S. Abeykoon, L. Calabrò, D. Di Genova, A. Kurnosov, E. C. Bamber, D. Bondar, P. Valdivia, A. Vona, M. R. Carroll, C. Romano, F. Arzilli",
+      "journal": "Journal of Geophysical Research: Solid Earth, 131, e2026JB033754",
+      "year": 2026,
+      "url": "",
+      "doi": "10.1029/2026JB033754"
+    },
+    {
+      "id": "bonechi2026",
+      "title": "Superheating in mafic magmas controls clinopyroxene nucleation delay and magma ascent dynamics",
+      "authors": "B. Bonechi, F. Arzilli, M. Polacci, A. Fabbrizio, G. La Spina, E. Michailidou, E. Biagioli, R. Brooker, J. L. Hazemann, R. C. Atwood, D. Di Genova, S. Abeykoon, D. Neave, R. Almeev, M. Burton",
+      "journal": "Nature Communications, 17, 4962",
+      "year": 2026,
+      "url": "",
+      "doi": "10.1038/s41467-026-73352-1"
+    },
+    {
+      "id": "califano2026",
+      "title": "Experimental and thermodynamic constraints on the magmatic variables governing pre-eruptive conditions at Hunga volcano: Development of a new equilibrium orthopyroxene-clinopyroxene thermometer",
+      "authors": "E. Califano, S. Mollo, M. Brenna, A. Pontesilli, J. Wu, P. Marks, D. Eul, M. Nowak, S. J. Cronin, F. Di Fiore, A. Vona, S. Abeykoon, D. Di Genova, C. Romano, P. Scarlato",
+      "journal": "Chemical Geology, 123328",
+      "year": 2026,
+      "url": "",
+      "doi": "10.1016/j.chemgeo.2026.123328"
+    },
+    {
+      "id": "stopponi2026",
+      "title": "Viscosity and structure of Na2O-enriched haplogranitic melts: a DSC shift-factor calibration for peralkaline rhyolites",
+      "authors": "V. Stopponi, G. Giuliani, L. Calabró, D. Bondar, S. Abeykoon, C. Romano, D. B. Dingwell, D. Di Genova",
+      "journal": "Chemical Geology, 123196",
+      "year": 2026,
+      "url": "",
+      "doi": "10.1016/j.chemgeo.2025.123196"
+    },
+    {
+      "id": "giuliani2025",
+      "title": "Aluminium control on viscosity and structure of haplogranitic melts: Implications for rhyolitic melt viscosity and its determination",
+      "authors": "G. Giuliani, L. Calabró, V. Stopponi, D. Bondar, S. Abeykoon, C. Romano, D. B. Dingwell, D. Di Genova",
+      "journal": "Chemical Geology, 123127",
+      "year": 2025,
+      "url": "",
+      "doi": "10.1016/j.chemgeo.2025.123127"
+    },
+    {
+      "id": "digenova2025",
+      "title": "Intralaboratory calibration of the DSC shift-factor approach for melt viscosity determination: A case study on lead metasilicate glass",
+      "authors": "D. Di Genova, G. Giuliani, S. Abeykoon, K. Dadwal, S. Sharma, A. Khanna, A. Zandoná, D. Bondar, S. Meyer, J. Deubener",
+      "journal": "Journal of Non-Crystalline Solids, 666, 123709",
+      "year": 2025,
+      "url": "",
+      "doi": "10.1016/j.jnoncrysol.2025.123709"
+    },
+    {
+      "id": "fanesi2025",
+      "title": "A review of the differential scanning calorimetry shift-factor approach: Application to Colli Albani melt viscosity and implications for mafic Plinian eruptions",
+      "authors": "E. Fanesi, D. Di Genova, P. Valdivia, D. Bondar, S. Dominijanni, S. Abeykoon, G. Giuliani, A. Kurnosov, G. Giordano, M. Cassetta, A. Vona, C. Romano, F. Arzilli",
+      "journal": "Journal of Volcanology and Geothermal Research, 108276",
+      "year": 2025,
+      "url": "",
+      "doi": "10.1016/j.jvolgeores.2025.108276"
+    },
+    {
+      "id": "abeykoon2023jgr",
+      "title": "Deuterium content and site occupancy in iron sulphide at high pressure and temperature determined using in situ neutron diffraction measurements",
+      "authors": "S. Abeykoon, C. Howard, S. Dominijanni, L. Eberhard, A. Kurnosov, D. J. Frost, T. Boffa Ballaran, H. Terasaki, T. Sakamaki, A. Suzuki, E. Ohtani, A. Sano-Furukawa, J. Abe",
+      "journal": "Journal of Geophysical Research: Solid Earth, 128, e2023JB026710",
+      "year": 2023,
+      "url": "",
+      "doi": "10.1029/2023JB026710"
+    },
+    {
+      "id": "abeykoon2023cmp",
+      "title": "An experimental investigation of factors controlling the oxygen content of sulphide melts in the Earth's upper mantle",
+      "authors": "S. Abeykoon, V. Laurenz, D. J. Frost, N. Miyajima, C. McCammon",
+      "journal": "Contributions to Mineralogy and Petrology, 178, 13",
+      "year": 2023,
+      "url": "",
+      "doi": "10.1007/s00410-023-01992-3"
+    },
+    {
+      "id": "abeykoon2022",
+      "title": "The single-crystal diamond trap (SCDT): a new method to determine the composition of high-P-T fluids",
+      "authors": "S. Abeykoon, A. Audétat",
+      "journal": "Contributions to Mineralogy and Petrology, 177, 24",
+      "year": 2022,
+      "url": "",
+      "doi": "10.1007/s00410-021-01882-6"
+    },
+    {
+      "id": "blanchard2021",
+      "title": "Sulfur content at sulfide saturation of peridotite melt at upper mantle conditions",
+      "authors": "I. Blanchard, S. Abeykoon, D. J. Frost, D. C. Rubie",
+      "journal": "American Mineralogist, 106 (11)",
+      "year": 2021,
+      "url": "",
+      "doi": "10.2138/am-2021-7649"
+    },
+    {
+      "id": "miyajima2018",
+      "title": "Electron channelling contrast imaging of individual dislocations in geological materials using a field emission scanning electron microscope equipped with an EBSD system",
+      "authors": "N. Miyajima, Y. Li, S. Abeykoon, F. Heidelbach",
+      "journal": "European Journal of Mineralogy, 30 (1), 5-15",
+      "year": 2018,
+      "url": "",
+      "doi": "10.1127/ejm/2017/0029-2683"
+    },
+    {
+      "id": "joshua2018",
+      "title": "Seasonal movement of trace-element discharge in a typical south-Indian suburban community",
+      "authors": "D. I. Joshua, S. Abeykoon, I. Watanabe, L. Paszek, K. Balakrishna, M. Akiba, K. S. Guruge",
+      "journal": "Water Science & Technology, 77 (4), 1035-1047",
+      "year": 2018,
+      "url": "",
+      "doi": "10.2166/wst.2017.618"
+    },
+    {
+      "id": "guruge2017",
+      "title": "Trace element distribution and risk assessment in South Indian surface waterways",
+      "authors": "K. S. Guruge, P. Goswami, I. Watanabe, S. Abeykoon, V. P. Prabhasankar, K. R. Binu, D. I. Joshua, K. Balakrishna, M. Akiba, N. Munuswamy",
+      "journal": "International Journal of Environmental Science and Technology, 14, 1-18",
+      "year": 2017,
+      "url": "",
+      "doi": "10.1007/s13762-016-1129-6"
+    },
+    {
+      "id": "diyabalanage2016",
+      "title": "Has irrigated water from Mahaweli River contributed to the kidney disease of uncertain etiology in the dry zone of Sri Lanka?",
+      "authors": "S. Diyabalanage, S. Abekoon, I. Watanabe, C. Watai, Y. Ono, S. Wijesekara, K. S. Guruge, R. Chandrajith",
+      "journal": "Environmental Geochemistry and Health, 38, 679-690",
+      "year": 2016,
+      "url": "",
+      "doi": "10.1007/s10653-015-9749-1"
+    },
+    {
+      "id": "chandrajith2014",
+      "title": "Quantification of groundwater-seawater interaction in a coastal sandy aquifer system: a study from Panama, Sri Lanka",
+      "authors": "R. Chandrajith, D. Chaturangani, S. Abeykoon, J. A. C. Barth, R. van Geldern, E. Edirisinghe, C. B. Dissanayake",
+      "journal": "Environmental Earth Sciences, 72, 867-877",
+      "year": 2014,
+      "url": "",
+      "doi": "10.1007/s12665-013-3010-y"
+    }
+  ]
+}

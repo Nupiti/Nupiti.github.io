@@ -1,0 +1,7 @@
+# Originals and private files stay in Dropbox, never on the public site
+images/*
+!images/web/
+!images/press/
+files/*.docx
+files/thesis_and_reports/
+__pycache__/

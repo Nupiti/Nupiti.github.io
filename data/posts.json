@@ -1,0 +1,18 @@
+{
+  "_README": [
+    "Your writing lives here.",
+    "",
+    "TO ADD A POST:",
+    "  1. Copy posts/_template.html to posts/your-post-name.html and write in it.",
+    "  2. Add an entry to the 'posts' list below, newest first.",
+    "     'url' is the path to the file, e.g. 'posts/your-post-name.html'",
+    "     'kicker' is an optional small label - a place, a subject, a mood.",
+    "     Leave it out entirely if you prefer. There are deliberately no dates.",
+    "  3. Save.",
+    "",
+    "An empty list is fine. The page says so gracefully and does not look broken.",
+    "A blog with one post should look as deliberate as a blog with forty."
+  ],
+
+  "posts": []
+}

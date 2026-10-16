@@ -1,0 +1,90 @@
+{
+  "_README": [
+    "Your career, newest first. Feeds the timeline on the Research page.",
+    "TO ADD A POSITION: copy a block, put it at the top, fill it in.",
+    "  when   e.g. '2026 –' for current, '2024 – 2026' otherwise",
+    "  role   the position",
+    "  where  institution, city, country",
+    "  note   one line on what you worked on (optional)",
+    "  now    true for your current position (optional)",
+    "  url    the institution's website (optional) — the place name becomes a link"
+  ],
+  "positions": [
+    {
+      "when": "2026 –",
+      "role": "Researcher",
+      "where": "Consiglio Nazionale delle Ricerche, ISSMC, Faenza, Italy",
+      "note": "Experimental volcanology; volcanic ash to ceramics, with the materials groups in Faenza and Trento.",
+      "now": true,
+      "url": "https://www.issmc.cnr.it/"
+    },
+    {
+      "when": "2024 – 2026",
+      "role": "Postdoctoral researcher",
+      "where": "University of Camerino, Geology Division, Italy",
+      "note": "Micro- and nano-crystallisation kinetics of magmas: laboratory and real-time in situ observations, and what they mean for fragmentation.",
+      "url": "https://geologia.unicam.it/en"
+    },
+    {
+      "when": "2022 – 2024",
+      "role": "Postdoctoral researcher",
+      "where": "CRPG, CNRS / Université de Lorraine, Nancy, France",
+      "note": "An experimental investigation of the petrogenesis of carbonatite magmas.",
+      "url": "https://crpg.univ-lorraine.fr/en/home/"
+    },
+    {
+      "when": "2018 – 2022",
+      "role": "PhD, Experimental Geoscience",
+      "where": "Bayerisches Geoinstitut, University of Bayreuth, Germany",
+      "note": "German–Japanese IRTG Deep Earth Volatile Cycles. Thesis: experimental constraints on the compositions of sulphides and aqueous fluids in the Earth's interior. SIMP Doctoral Thesis Prize, 2024.",
+      "url": "https://www.bgi.uni-bayreuth.de/?&lng=en"
+    },
+    {
+      "when": "2019 – 2020",
+      "role": "Special Research Student",
+      "where": "Tohoku University, Sendai, Japan",
+      "note": "Deuterium in iron sulphide at high pressure and temperature, by in situ neutron diffraction at J-PARC.",
+      "url": "https://www.tohoku.ac.jp/en/"
+    },
+    {
+      "when": "2016 – 2018",
+      "role": "MSc, Experimental Geosciences",
+      "where": "Bayerisches Geoinstitut, University of Bayreuth, Germany",
+      "note": "Thesis: the oxygen content of mantle sulphides.",
+      "url": "https://www.bgi.uni-bayreuth.de/?&lng=en"
+    },
+    {
+      "when": "2014 – 2016",
+      "role": "Paris, finding my way",
+      "where": "Paris, France",
+      "note": "Two years away from science. I arrived without much of a plan and stayed because the city kept asking questions I could not yet answer. I worked small jobs, learned to live inside a culture that was not mine, and found that being a little lost somewhere beautiful is a perfectly good way to discover what you actually want — and where you belong. Looking back it was a hard time, and I would not change a day of it. Bayreuth followed.",
+      "url": "https://www.google.com/maps/place/Paris,+France/@48.8589385,2.2646332,17456m/data=!3m2!1e3!4b1!4m6!3m5!1s0x47e66e1f06e2b70f:0x40b82c3688c9460!8m2!3d48.8575475!4d2.3513765!16zL20vMDVxdGo"
+    },
+    {
+      "when": "2014",
+      "role": "Research assistant",
+      "where": "Department of Geology, University of Peradeniya, Sri Lanka",
+      "note": "Groundwater–seawater interaction in a coastal sandy aquifer, Panama, Sri Lanka.",
+      "url": "https://sci.pdn.ac.lk/geology/"
+    },
+    {
+      "when": "2013 – 2014",
+      "role": "Visiting research student",
+      "where": "AIST, Tsukuba, Japan",
+      "note": "Trace elements in South Indian and Sri Lankan waterways.",
+      "url": "https://www.aist.go.jp/index_en.html"
+    },
+    {
+      "when": "2012 – 2013",
+      "role": "Research assistant",
+      "where": "Ecological Association of Sri Lanka"
+    },
+    {
+      "when": "2008 – 2013",
+      "role": "BSc, Geology",
+      "where": "University of Peradeniya, Sri Lanka",
+      "note": "Thesis: forest management and soil carbon sequestration at the Maragamuwa conservation site, Naula.",
+      "url": "https://www.pdn.ac.lk/"
+    }
+  ]
+}

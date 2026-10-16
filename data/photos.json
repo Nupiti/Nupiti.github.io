@@ -1,0 +1,914 @@
+{
+  "_README": [
+    "This is the only file you edit to change the gallery.",
+    "Web-ready images live in images/web/ (made by tools/add-photos.py from your originals).",
+    "A session is a story, not a place. \"pick\": true makes a photo the large one at the top.",
+    "Caption convention: a short descriptive phrase, no final full stop, place last after a comma."
+  ],
+  "sessions": [
+    {
+      "title": "Mountains",
+      "place": "The Alps, the Dolomites, the Sibillini",
+      "note": "I grew up in hill country in central Sri Lanka, and I have never really left it. Walking a ridge in Europe is the same feeling as being nine years old in Matale — only colder, and now I carry a camera. Geography turns out not to be what the word home is made of.",
+      "photos": [
+        {
+          "file": "mtn-03.jpg",
+          "caption": "Monte Rosa",
+          "pick": true
+        },
+        {
+          "file": "mtn-01.jpg",
+          "caption": "The Matterhorn from the Monte Rosa side"
+        },
+        {
+          "file": "mtn-05.jpg",
+          "caption": "First light on the Mont Blanc massif"
+        },
+        {
+          "file": "mtn-02.jpg",
+          "caption": "The snow dome, minutes after sunrise"
+        },
+        {
+          "file": "mtn-04.jpg",
+          "caption": "Ice and rock on the Monte Rosa glacier"
+        },
+        {
+          "file": "mtn-06.jpg",
+          "caption": "Rock in the foreground, glacier behind"
+        },
+        {
+          "file": "mtn-08.jpg",
+          "caption": "The glacier after sunset"
+        },
+        {
+          "file": "mtn-09.jpg",
+          "caption": "A hut, and the lake holding it"
+        },
+        {
+          "file": "life-mountains.jpg",
+          "caption": "A cairn above the snowline"
+        },
+        {
+          "file": "mtn-10.jpg",
+          "caption": "The path switchbacking up through the larches"
+        },
+        {
+          "file": "mtn-11.jpg",
+          "caption": "Mont Blanc under cloud"
+        },
+        {
+          "file": "mtn-12.jpg",
+          "caption": "Evening light on the summits"
+        },
+        {
+          "file": "mtn-07.jpg",
+          "caption": "Alpenglow on the Bossons glacier"
+        },
+        {
+          "file": "mtn-13.jpg",
+          "caption": "Dusk, with the moon rising"
+        },
+        {
+          "file": "mtn-14.jpg",
+          "caption": "Inside the glacier, Mer de Glace"
+        },
+        {
+          "file": "mtn-15.jpg",
+          "caption": "Green valley below the Aiguilles"
+        },
+        {
+          "file": "mtn-16.jpg",
+          "caption": "Dolomites, afternoon"
+        },
+        {
+          "file": "mtn-17.jpg",
+          "caption": "A lake under the ridge, Dolomites"
+        },
+        {
+          "file": "mtn-18.jpg",
+          "caption": "The valley opening, Dolomites"
+        },
+        {
+          "file": "mtn-19.jpg",
+          "caption": "A limestone tower above the larches"
+        },
+        {
+          "file": "mtn-20.jpg",
+          "caption": "Signpost at the pass"
+        },
+        {
+          "file": "home-mountains.jpg",
+          "caption": "A ridge in the Monti Sibillini"
+        },
+        {
+          "file": "mtn-21.jpg",
+          "caption": "The ridge line, Sibillini"
+        },
+        {
+          "file": "mtn-22.jpg",
+          "caption": "Ridge after ridge, Sibillini"
+        },
+        {
+          "file": "mtn-23.jpg",
+          "caption": "The valley wall"
+        },
+        {
+          "file": "mtn-24.jpg",
+          "caption": "Monte Vettore"
+        },
+        {
+          "file": "mtn-25.jpg",
+          "caption": "Grass ridge in the afternoon"
+        },
+        {
+          "file": "mtn-26.jpg",
+          "caption": "Two walkers on the slope"
+        }
+      ]
+    },
+    {
+      "title": "Small things, long lens",
+      "place": "Wherever I happen to stop",
+      "note": "Most of the time I am not looking at the view. I am looking for something the size of a thumb, three branches in. A long lens is not really equipment — it is the same impulse that made me want to see the detail in everything I read as a child, pointed at a living thing that will be gone in a second.",
+      "photos": [
+        {
+          "file": "close-01.jpg",
+          "caption": "A mother's love, on a ledge above Monte Rosa",
+          "pick": true
+        },
+        {
+          "file": "close-02.jpg",
+          "caption": "Two ibex on the ledge"
+        },
+        {
+          "file": "close-04.jpg",
+          "caption": "Ibex at rest"
+        },
+        {
+          "file": "close-03.jpg",
+          "caption": "An ibex family on the scree"
+        },
+        {
+          "file": "close-06.jpg",
+          "caption": "Ibex grazing on the moraine"
+        },
+        {
+          "file": "close-07.jpg",
+          "caption": "Marmot, watching back"
+        },
+        {
+          "file": "close-09.jpg",
+          "caption": "Two marmots among the flowers"
+        },
+        {
+          "file": "close-10.jpg",
+          "caption": "Almost exactly the colour of the scree"
+        },
+        {
+          "file": "close-11.jpg",
+          "caption": "A hare on the wall, Monte Rosa behind"
+        },
+        {
+          "file": "close-12.jpg",
+          "caption": "The dog in charge of the flock"
+        },
+        {
+          "file": "close-13.jpg",
+          "caption": "A cow with a bell, uninterested"
+        },
+        {
+          "file": "close-14.jpg",
+          "caption": "The cat who owned the rifugio"
+        },
+        {
+          "file": "close-15.jpg",
+          "caption": "A cat between the planters, Blois"
+        },
+        {
+          "file": "close-16.jpg",
+          "caption": "Blue tit"
+        },
+        {
+          "file": "close-08.jpg",
+          "caption": "A falcon, keeping watch from the railing"
+        },
+        {
+          "file": "close-17.jpg",
+          "caption": "Two falcons, and a moment that belongs to spring"
+        },
+        {
+          "file": "close-18.jpg",
+          "caption": "Greylag goose with goslings"
+        },
+        {
+          "file": "close-19.jpg",
+          "caption": "Greylag goose"
+        },
+        {
+          "file": "close-05.jpg",
+          "caption": "Spring gentian"
+        },
+        {
+          "file": "close-20.jpg",
+          "caption": "Violet"
+        },
+        {
+          "file": "close-21.jpg",
+          "caption": "A bell flower, nodding"
+        },
+        {
+          "file": "close-22.jpg",
+          "caption": "Alpine flower, red"
+        },
+        {
+          "file": "close-23.jpg",
+          "caption": "Thistles gone to seed"
+        },
+        {
+          "file": "close-24.jpg",
+          "caption": "Larch, new needles"
+        },
+        {
+          "file": "close-25.jpg",
+          "caption": "Lichen on a dead branch"
+        },
+        {
+          "file": "close-26.jpg",
+          "caption": "Frost, doing what blossom does"
+        },
+        {
+          "file": "close-27.jpg",
+          "caption": "Cornflowers"
+        },
+        {
+          "file": "close-28.jpg",
+          "caption": "Allium"
+        },
+        {
+          "file": "close-29.jpg",
+          "caption": "A bee on verbena"
+        },
+        {
+          "file": "close-30.jpg",
+          "caption": "Purple spikes against the wall"
+        },
+        {
+          "file": "close-31.jpg",
+          "caption": "Grass heads in the sun"
+        },
+        {
+          "file": "close-32.jpg",
+          "caption": "Giant water lilies"
+        },
+        {
+          "file": "close-33.jpg",
+          "caption": "Lotus"
+        },
+        {
+          "file": "close-34.jpg",
+          "caption": "African violet"
+        },
+        {
+          "file": "close-35.jpg",
+          "caption": "Fireweed"
+        },
+        {
+          "file": "close-36.jpg",
+          "caption": "Borage"
+        },
+        {
+          "file": "close-37.jpg",
+          "caption": "Lavender"
+        },
+        {
+          "file": "close-38.jpg",
+          "caption": "Golden orb weaver, Sri Lanka"
+        }
+      ]
+    },
+    {
+      "title": "The night sky",
+      "place": "Mostly from a field outside Bayreuth",
+      "note": "Comet NEOWISE came past in the summer of 2020 and will not be back for about six thousand years. There is only one chance at a thing like that: set up, work the settings until the detail appears, and do not touch it afterwards.",
+      "photos": [
+        {
+          "file": "sky-01.jpg",
+          "caption": "Comet NEOWISE, July 2020",
+          "pick": true
+        },
+        {
+          "file": "sky-02.jpg",
+          "caption": "The same comet, a longer look"
+        },
+        {
+          "file": "sky-03.jpg",
+          "caption": "NEOWISE over the field"
+        },
+        {
+          "file": "sky-04.jpg",
+          "caption": "Eclipse"
+        },
+        {
+          "file": "sky-05.jpg",
+          "caption": "Daylight moon"
+        },
+        {
+          "file": "sky-06.jpg",
+          "caption": "Moon over the Alps"
+        }
+      ]
+    },
+    {
+      "title": "Sri Lanka",
+      "place": "Horton Plains, the east coast, Anuradhapura, Sigiriya, home",
+      "note": "Where the looking started. Cloud forest at altitude, sambar deer that do not run, a stupa older than almost anything in Europe, and the garden at home. Some of these are twenty years old and taken on whatever camera I had.",
+      "photos": [
+        {
+          "file": "sl-01.jpg",
+          "caption": "Cloud forest on Horton Plains",
+          "pick": true
+        },
+        {
+          "file": "sl-02.jpg",
+          "caption": "The same trees, deeper in the mist"
+        },
+        {
+          "file": "sl-05.jpg",
+          "caption": "The path across the plains"
+        },
+        {
+          "file": "sl-03.jpg",
+          "caption": "A stream on Horton Plains"
+        },
+        {
+          "file": "sl-04.jpg",
+          "caption": "Sambar deer"
+        },
+        {
+          "file": "sl-06.jpg",
+          "caption": "Close enough to be looked at"
+        },
+        {
+          "file": "sl-07.jpg",
+          "caption": "Sri Lankan junglefowl"
+        },
+        {
+          "file": "sl-13.jpg",
+          "caption": "Opening"
+        },
+        {
+          "file": "sl-08.jpg",
+          "caption": "A blue flower on the plains"
+        },
+        {
+          "file": "sl-09.jpg",
+          "caption": "Toque macaque"
+        },
+        {
+          "file": "sl-11.jpg",
+          "caption": "Toque macaque, looking back"
+        },
+        {
+          "file": "sl-12.jpg",
+          "caption": "White-bellied sea eagle"
+        },
+        {
+          "file": "sl-14.jpg",
+          "caption": "Elephants, resting"
+        },
+        {
+          "file": "sl-10.jpg",
+          "caption": "Sunrise on the east coast"
+        },
+        {
+          "file": "sl-15.jpg",
+          "caption": "Ruwanwelisaya, Anuradhapura"
+        },
+        {
+          "file": "sl-16.jpg",
+          "caption": "The frescoes at Sigiriya"
+        },
+        {
+          "file": "sl-17.jpg",
+          "caption": "Night-flowering, in my mother's garden"
+        },
+        {
+          "file": "sl-18.jpg",
+          "caption": "Orchids at night, home garden"
+        },
+        {
+          "file": "sl-19.jpg",
+          "caption": "Flowers in the garden"
+        },
+        {
+          "file": "sl-20.jpg",
+          "caption": "Lichen on a branch"
+        }
+      ]
+    },
+    {
+      "title": "Etna",
+      "place": "Sicily",
+      "note": "The one place where my work and my camera point at the same thing. A volcano is the deep Earth arriving at the surface, and standing on the flank of one is the only time I get to see the thing I spend my working life reproducing in a press the size of a desk.",
+      "photos": [
+        {
+          "file": "etna-01.jpg",
+          "caption": "The summit, degassing",
+          "pick": true
+        },
+        {
+          "file": "etna-02.jpg",
+          "caption": "Etna's summit craters from the southern flank"
+        },
+        {
+          "file": "etna-03.jpg",
+          "caption": "An older crater"
+        },
+        {
+          "file": "etna-04.jpg",
+          "caption": "Crater rim"
+        },
+        {
+          "file": "etna-06.jpg",
+          "caption": "The road across the cones"
+        },
+        {
+          "file": "etna-07.jpg",
+          "caption": "Cones and ash"
+        },
+        {
+          "file": "etna-08.jpg",
+          "caption": "A scoria cone above the refuge"
+        },
+        {
+          "file": "etna-05.jpg",
+          "caption": "Oxidised scoria"
+        },
+        {
+          "file": "deep-time.jpg",
+          "caption": "Layered lava, up close"
+        },
+        {
+          "file": "etna-09.jpg",
+          "caption": "The coast from the flank, in haze"
+        },
+        {
+          "file": "etna-10.jpg",
+          "caption": "Catania, after dark"
+        },
+        {
+          "file": "etna-11.jpg",
+          "caption": "Umbrellas over a Catania street"
+        },
+        {
+          "file": "etna-12.jpg",
+          "caption": "The cathedral dome at night, Catania"
+        }
+      ]
+    },
+    {
+      "title": "Bayreuth, and around it",
+      "place": "Franconia, six years of seasons",
+      "note": "The town where I did my master's and my doctorate, and the countryside around it, through every season. Nothing dramatic happens in Franconia. That is rather the point of it.",
+      "photos": [
+        {
+          "file": "bay-01.jpg",
+          "caption": "An autumn path",
+          "pick": true
+        },
+        {
+          "file": "bay-02.jpg",
+          "caption": "The Hofgarten pond"
+        },
+        {
+          "file": "bay-03.jpg",
+          "caption": "A bridge in the Hofgarten"
+        },
+        {
+          "file": "bay-04.jpg",
+          "caption": "The pavilion in the woods"
+        },
+        {
+          "file": "bay-05.jpg",
+          "caption": "A gilded figure at the Eremitage"
+        },
+        {
+          "file": "bay-06.jpg",
+          "caption": "Lanterns over the street"
+        },
+        {
+          "file": "bay-07.jpg",
+          "caption": "An orange tree, indoors"
+        },
+        {
+          "file": "bay-08.jpg",
+          "caption": "Cows in the snow"
+        },
+        {
+          "file": "bay-09.jpg",
+          "caption": "Bayreuth"
+        },
+        {
+          "file": "bay-10.jpg",
+          "caption": "Bayreuth"
+        },
+        {
+          "file": "bay-11.jpg",
+          "caption": "Light in the forest"
+        },
+        {
+          "file": "bay-12.jpg",
+          "caption": "A doorway, lit"
+        }
+      ]
+    },
+    {
+      "title": "Stone and light",
+      "place": "Rome, Florence, Pisa, Venice, Trieste, the Loire, Paris",
+      "note": "I did not expect to become someone who photographs buildings. But a dome at the right hour is a geological problem as much as an architectural one — it is all weight, and how to carry it. The marble is the same rock I would otherwise be cooking.",
+      "photos": [
+        {
+          "file": "stone-01.jpg",
+          "caption": "My favourite photograph I have taken",
+          "pick": true
+        },
+        {
+          "file": "stone-02.jpg",
+          "caption": "St Peter's at dusk"
+        },
+        {
+          "file": "stone-03.jpg",
+          "caption": "Across the Tiber"
+        },
+        {
+          "file": "stone-04.jpg",
+          "caption": "Along the Tiber"
+        },
+        {
+          "file": "stone-05.jpg",
+          "caption": "Looking up into the dome"
+        },
+        {
+          "file": "stone-06.jpg",
+          "caption": "The lantern of the dome"
+        },
+        {
+          "file": "stone-07.jpg",
+          "caption": "The façade of St Peter's"
+        },
+        {
+          "file": "stone-09.jpg",
+          "caption": "Dome and streetlamp"
+        },
+        {
+          "file": "stone-10.jpg",
+          "caption": "The Forum at dusk"
+        },
+        {
+          "file": "stone-11.jpg",
+          "caption": "The Temple of Saturn"
+        },
+        {
+          "file": "stone-12.jpg",
+          "caption": "Under the arch"
+        },
+        {
+          "file": "stone-13.jpg",
+          "caption": "David, looking left"
+        },
+        {
+          "file": "stone-14.jpg",
+          "caption": "David, in profile"
+        },
+        {
+          "file": "stone-15.jpg",
+          "caption": "David"
+        },
+        {
+          "file": "stone-16.jpg",
+          "caption": "A hand, in marble"
+        },
+        {
+          "file": "stone-17.jpg",
+          "caption": "Carved"
+        },
+        {
+          "file": "stone-18.jpg",
+          "caption": "Florence from the hill"
+        },
+        {
+          "file": "stone-19.jpg",
+          "caption": "Pisa"
+        },
+        {
+          "file": "stone-20.jpg",
+          "caption": "The Baptistery, Pisa"
+        },
+        {
+          "file": "stone-21.jpg",
+          "caption": "The tower, from below"
+        },
+        {
+          "file": "stone-08.jpg",
+          "caption": "A stone pine at sunset, Tuscany"
+        },
+        {
+          "file": "stone-22.jpg",
+          "caption": "A hill town, going dark"
+        },
+        {
+          "file": "stone-23.jpg",
+          "caption": "A tower in Tuscany"
+        },
+        {
+          "file": "stone-24.jpg",
+          "caption": "Tuscany"
+        },
+        {
+          "file": "stone-25.jpg",
+          "caption": "Venice, with nobody in it"
+        },
+        {
+          "file": "stone-26.jpg",
+          "caption": "A narrow calle"
+        },
+        {
+          "file": "stone-27.jpg",
+          "caption": "A table laid, nobody yet"
+        },
+        {
+          "file": "stone-29.jpg",
+          "caption": "Gondolas"
+        },
+        {
+          "file": "stone-30.jpg",
+          "caption": "A side canal"
+        },
+        {
+          "file": "stone-31.jpg",
+          "caption": "Along the canal"
+        },
+        {
+          "file": "stone-32.jpg",
+          "caption": "San Giorgio through the mooring poles"
+        },
+        {
+          "file": "stone-33.jpg",
+          "caption": "A canal, looking up"
+        },
+        {
+          "file": "stone-34.jpg",
+          "caption": "Inside"
+        },
+        {
+          "file": "stone-35.jpg",
+          "caption": "Waiting"
+        },
+        {
+          "file": "stone-36.jpg",
+          "caption": "Murano glass"
+        },
+        {
+          "file": "stone-37.jpg",
+          "caption": "Venice"
+        },
+        {
+          "file": "stone-38.jpg",
+          "caption": "Venice"
+        },
+        {
+          "file": "stone-39.jpg",
+          "caption": "Venice"
+        },
+        {
+          "file": "stone-40.jpg",
+          "caption": "Château de Chambord"
+        },
+        {
+          "file": "stone-42.jpg",
+          "caption": "The lantern tower, Chambord"
+        },
+        {
+          "file": "stone-43.jpg",
+          "caption": "Blois from the bridge"
+        },
+        {
+          "file": "stone-44.jpg",
+          "caption": "A street in Blois"
+        },
+        {
+          "file": "stone-45.jpg",
+          "caption": "The gardens at Blois"
+        },
+        {
+          "file": "stone-46.jpg",
+          "caption": "Horse and carriage"
+        },
+        {
+          "file": "stone-47.jpg",
+          "caption": "A stone figure"
+        },
+        {
+          "file": "stone-48.jpg",
+          "caption": "Lamplight"
+        },
+        {
+          "file": "stone-49.jpg",
+          "caption": "A stone fountain in the woods, Nancy"
+        },
+        {
+          "file": "stone-50.jpg",
+          "caption": "The Eiffel Tower at night"
+        },
+        {
+          "file": "stone-51.jpg",
+          "caption": "The Canal Grande, Trieste"
+        }
+      ]
+    },
+    {
+      "title": "The sea",
+      "place": "Sardinia, Trieste",
+      "note": "A bicycle, a coast road, and the light going down over water. Not every photograph needs to be about anything.",
+      "photos": [
+        {
+          "file": "sea-01.jpg",
+          "caption": "Sunset over the gulf, Sardinia",
+          "pick": true
+        },
+        {
+          "file": "sea-02.jpg",
+          "caption": "The sun going down behind the headland"
+        },
+        {
+          "file": "sea-03.jpg",
+          "caption": "The boat, closer"
+        },
+        {
+          "file": "sea-04.jpg",
+          "caption": "The coast at Alghero"
+        },
+        {
+          "file": "sea-05.jpg",
+          "caption": "Capo Caccia"
+        },
+        {
+          "file": "sea-06.jpg",
+          "caption": "Coast and watchtower"
+        },
+        {
+          "file": "sea-07.jpg",
+          "caption": "The cliff edge"
+        },
+        {
+          "file": "sea-08.jpg",
+          "caption": "Cliff, Capo Caccia"
+        },
+        {
+          "file": "sunday.jpg",
+          "caption": "The bike, above the sea"
+        },
+        {
+          "file": "sea-09.jpg",
+          "caption": "Two bikes on the bridge"
+        },
+        {
+          "file": "sea-10.jpg",
+          "caption": "A tower on the headland"
+        },
+        {
+          "file": "sea-11.jpg",
+          "caption": "Alghero rooftops"
+        },
+        {
+          "file": "sea-12.jpg",
+          "caption": "The tiled dome, Alghero"
+        },
+        {
+          "file": "sea-13.jpg",
+          "caption": "A yellow villa by the water"
+        },
+        {
+          "file": "sea-14.jpg",
+          "caption": "Dancers on the ramparts"
+        },
+        {
+          "file": "sea-15.jpg",
+          "caption": "Sardinia"
+        },
+        {
+          "file": "sea-16.jpg",
+          "caption": "Sardinia"
+        },
+        {
+          "file": "sea-17.jpg",
+          "caption": "Sun through the fountain, Trieste"
+        },
+        {
+          "file": "sea-18.jpg",
+          "caption": "The marina at sunset"
+        },
+        {
+          "file": "sea-19.jpg",
+          "caption": "Sun over the gulf"
+        },
+        {
+          "file": "sea-20.jpg",
+          "caption": "Sunset, Trieste"
+        },
+        {
+          "file": "sea-21.jpg",
+          "caption": "The sun going into the Adriatic"
+        },
+        {
+          "file": "sea-22.jpg",
+          "caption": "Lamp and the setting sun"
+        },
+        {
+          "file": "sea-23.jpg",
+          "caption": "Alone on the jetty"
+        }
+      ]
+    },
+    {
+      "title": "Elsewhere",
+      "place": "Switzerland, Dubai, Japan",
+      "note": "Places passed through on the way to somewhere else.",
+      "photos": [
+        {
+          "file": "else-01.jpg",
+          "caption": "A Swiss lake",
+          "pick": true
+        },
+        {
+          "file": "else-02.jpg",
+          "caption": "Dunes at dusk, Dubai"
+        },
+        {
+          "file": "else-03.jpg",
+          "caption": "Tsukuba under snow"
+        },
+        {
+          "file": "else-04.jpg",
+          "caption": "A shrine in winter sun, Japan"
+        },
+        {
+          "file": "else-05.jpg",
+          "caption": "Steps up to the shop, Japan"
+        }
+      ]
+    },
+    {
+      "title": "In the laboratory",
+      "place": "Bayreuth, Nancy, Tokai",
+      "note": "Not photography exactly, but some of the most beautiful things I have seen were down a microscope, and some of the most satisfying were drawn by hand. A metal sphere surrounded by silicate melt — a core and a mantle, made by a master's student who could not speak for a minute afterwards. And the drawings: I like making diagrams almost as much as making experiments, and these, from the thesis, are how I explain a press, a sample assembly or a planet to someone who has never seen one.",
+      "photos": [
+        {
+          "file": "fig-accretion.jpg",
+          "caption": "How the Earth put itself together, from accretion to the air we breathe",
+          "pick": true
+        },
+        {
+          "file": "small-earth-clean.jpg",
+          "caption": "A core and a mantle, one millimetre across"
+        },
+        {
+          "file": "fig-subduction.jpg",
+          "caption": "A subduction zone: slab fluids, melting, and the volcano on top"
+        },
+        {
+          "file": "fig-multianvil.jpg",
+          "caption": "The 6/8 multi-anvil principle: an octahedron inside eight cubes inside six anvils"
+        },
+        {
+          "file": "fig-ma-assembly.jpg",
+          "caption": "Cut-away of an 18/11 multi-anvil cell, with its lanthanum chromite heater"
+        },
+        {
+          "file": "fig-six-anvil.jpg",
+          "caption": "The six-ram press, seen from above"
+        },
+        {
+          "file": "fig-neutron-beam.jpg",
+          "caption": "A sample column inside the six anvils, and the neutron beam finding its way through the gaps"
+        },
+        {
+          "file": "fig-piston-cylinder.jpg",
+          "caption": "An end-loaded piston-cylinder press"
+        },
+        {
+          "file": "fig-pc-assembly.jpg",
+          "caption": "A half-inch piston-cylinder assembly, layer by layer"
+        },
+        {
+          "file": "fig-scdt.jpg",
+          "caption": "The single-crystal diamond trap: a drilled diamond plate at the top of a platinum capsule"
+        },
+        {
+          "file": "fig-epma.jpg",
+          "caption": "An electron microprobe, from the gun to the spectrometer"
+        }
+      ]
+    }
+  ]
+}

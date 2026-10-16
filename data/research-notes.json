@@ -1,0 +1,179 @@
+{
+  "_README": [
+    "Research highlights — the scientific feed on the Research page.",
+    "",
+    "This is the section modelled on how experimental groups present their work:",
+    "newest first, each entry a figure, a title, and a short technical summary.",
+    "It is written for colleagues, not for the general reader - the rest of the",
+    "Research page does the plain-language job.",
+    "",
+    "TO ADD AN ENTRY:",
+    "  Copy a block below, put it at the TOP of the list, and fill it in.",
+    "    date     a short label, e.g. 'October 2026'. Free text.",
+    "    title    one line.",
+    "    body     the summary. Two or three sentences is right.",
+    "    image    a file in images/web/  (optional - leave as \"\" for no figure)",
+    "    link     URL to the paper, preprint or project page (optional)",
+    "    linkText what the link should say (optional, defaults to 'Read the paper')",
+    "    tag      small label above the title, e.g. 'Publication', 'Instrument',",
+    "             'Beamtime', 'Grant', 'Talk'. Optional.",
+    "",
+    "Entries are shown in the order they appear here. Newest at the top.",
+    "image    a file in images/web/. Files starting with 'fig-' are line drawings and are shown on a white plate, uncropped."
+  ],
+  "notes": [
+    {
+      "date": "February 2026",
+      "tag": "Beamtime",
+      "title": "Mössbauer spectroscopy at ESRF ID14",
+      "body": "A week on ID14 at the European Synchrotron, using nuclear resonant scattering to determine the oxidation state and coordination environment of iron in silicate glasses and melts. Iron redox is one of the strongest single controls on melt viscosity and on crystallisation behaviour, and it remains difficult to measure in situ at magmatic temperatures. Proposal ES-1817.",
+      "image": "fig-mossbauer.jpg",
+      "link": "https://www.esrf.fr/",
+      "linkText": "About ESRF"
+    },
+    {
+      "date": "2026",
+      "tag": "Publication",
+      "title": "Viscosity of trachytic melt from the Agnano–Monte Spina eruption, Campi Flegrei",
+      "body": "Calorimetry, viscometry and in situ Raman and Brillouin spectroscopy combined on the Agnano–Monte Spina trachyte. The melt begins to reorganise at the nanoscale within minutes above its glass transition, so standard viscometry can overestimate its viscosity by up to a log unit; a model built around that shows a hundred-thousand-fold stiffening as the melt loses its water — ten times earlier estimates — with consequences for degassing, fragmentation and eruptive style. Journal of Geophysical Research: Solid Earth.",
+      "image": "note-campi.jpg",
+      "link": "https://doi.org/10.1029/2026JB033754",
+      "linkText": "Read the paper"
+    },
+    {
+      "date": "2026",
+      "tag": "Publication",
+      "title": "Superheating controls clinopyroxene nucleation delay in mafic magmas",
+      "body": "In situ synchrotron observation of crystallisation in mafic melts shows that superheating delays clinopyroxene nucleation, so ascending magma stays less crystalline than equilibrium would predict. Because crystal content governs viscosity, and viscosity governs whether a conduit erupts gently or explosively, the delay has direct consequences for ascent dynamics. Nature Communications.",
+      "image": "fig-superheating.jpg",
+      "link": "https://doi.org/10.1038/s41467-026-73352-1",
+      "linkText": "Read the paper"
+    },
+    {
+      "date": "2026",
+      "tag": "Grant",
+      "title": "AVEXT-3D, the data: pore networks from 27 tomograms (EXCITE2)",
+      "body": "The follow-up: twenty days of remote data-processing access at CEITEC to segment the scanned volumes and extract porosity, bubble number density, connectivity, tortuosity and throat-to-pore ratios for every sample. Those numbers feed the conduit model of La Spina et al. (2022), which is where microtexture turns into a statement about eruptive style — from the effusive to the paroxysmal, across basalt, basanite, trachyte and rhyolite.",
+      "image": "note-avext-data.jpg",
+      "link": "https://www.ceitec.eu/",
+      "linkText": "About CEITEC"
+    },
+    {
+      "date": "July 2025",
+      "tag": "Beamtime",
+      "title": "Phase-contrast microtomography at ESRF BM18",
+      "body": "Three-dimensional imaging of volcanic products at BM18, resolving vesicle networks and crystal textures without sectioning the sample. Porosity and its connectivity determine whether gas escapes from a magma or pressurises it, and that is only visible in three dimensions. Proposal ES-1647.",
+      "image": "fig-phase-contrast.jpg",
+      "link": "https://www.esrf.fr/",
+      "linkText": "About ESRF"
+    },
+    {
+      "date": "2025",
+      "tag": "Grant",
+      "title": "AVEXT-3D — volcanic rock textures by 3D X-ray microtomography (EXCITE2)",
+      "body": "Transnational-access project at CEITEC, Brno, funded through the EXCITE2 network: twenty-seven samples — pumice and scoria from Stromboli, Vulcano and Lipari, and run products from controlled decompression experiments in a cold-seal vessel — scanned at a voxel size of about 1.5 µm on the phoenix v|tome|x L240, fine enough to resolve the 2–3 µm glass films between neighbouring bubbles. Whether gas escapes a rising magma or builds until it fragments is decided in that pore network.",
+      "image": "fig-avext.jpg",
+      "link": "https://www.ceitec.eu/",
+      "linkText": "About CEITEC"
+    },
+    {
+      "date": "2025",
+      "tag": "Grant",
+      "title": "HYDROETNA — glass and melt properties of hydrous Etna trachybasalt",
+      "body": "Awarded through ILGE-TNA/NOA 2025, hosted at the National Institute of Geophysics and Volcanology in Rome. Dissolved water lowers the viscosity of a silicate melt by orders of magnitude, so quantifying it in Etna trachybasalt is a prerequisite for any realistic model of how that system erupts.",
+      "image": "note-hydroetna.jpg",
+      "link": "",
+      "linkText": ""
+    },
+    {
+      "date": "2025",
+      "tag": "Method",
+      "title": "Calibrating the DSC shift-factor approach between laboratories",
+      "body": "Differential scanning calorimetry offers a fast route to melt viscosity near the glass transition, but the shift-factor approach it depends on had not been shown to give consistent results across laboratories. Using lead metasilicate glass as a common reference, this work established that calibration, together with a parallel study on Na₂O-enriched and aluminium-bearing haplogranitic melts.",
+      "image": "note-flashdsc.jpg",
+      "link": "https://doi.org/10.1016/j.jnoncrysol.2025.123709",
+      "linkText": "Read the paper"
+    },
+    {
+      "date": "April 2025",
+      "tag": "Beamtime",
+      "title": "Falling-sphere viscometry at ESRF ID27",
+      "body": "High-pressure, high-temperature viscosity measurement at the European Synchrotron, tracking a falling marker sphere through a melt under X-ray radiography. The campaign also tested a modified Paris–Edinburgh cell assembly developed for the purpose — a design problem as much as a measurement one, since the cell has to stay transparent to the beam while holding pressure.",
+      "image": "note-esrf.jpg",
+      "link": "https://www.esrf.fr/",
+      "linkText": "About ESRF"
+    },
+    {
+      "date": "October 2024",
+      "tag": "Beamtime",
+      "title": "Falling-sphere viscometry at SOLEIL PSICHE",
+      "body": "The first of the two falling-sphere campaigns, on the PSICHE beamline at SOLEIL near Paris: a Paris–Edinburgh press in the white beam, a melt at pressure and temperature, and a small sphere whose fall, filmed in X-rays, gives the viscosity directly. Much of the week went into making the new cell assembly behave.",
+      "image": "note-soleil.jpg",
+      "link": "https://www.synchrotron-soleil.fr/en",
+      "linkText": "About SOLEIL"
+    },
+    {
+      "date": "2023",
+      "tag": "Publication",
+      "title": "Deuterium content and site occupancy in iron sulphide, by in situ neutron diffraction",
+      "body": "Neutrons see hydrogen where X-rays effectively cannot. Working at J-PARC in Japan, we located deuterium within the iron sulphide structure at high pressure and temperature, and quantified how much it holds. Iron sulphide is a plausible host for hydrogen in planetary cores, which makes its capacity part of the budget for where a planet's water ends up. Journal of Geophysical Research: Solid Earth.",
+      "image": "fig-fes-structure.jpg",
+      "link": "https://doi.org/10.1029/2023JB026710",
+      "linkText": "Read the paper"
+    },
+    {
+      "date": "2023",
+      "tag": "Publication",
+      "title": "What controls the oxygen content of sulphide melts in the upper mantle",
+      "body": "Sulphide inclusions trapped in diamonds carry a record of the conditions under which they grew. This experimental study established how temperature, pressure and composition govern the oxygen dissolved in mantle sulphide melt — the basis for using that oxygen content as a geothermometer. Contributions to Mineralogy and Petrology.",
+      "image": "small-earth-clean.jpg",
+      "link": "https://doi.org/10.1007/s00410-023-01992-3",
+      "linkText": "Read the paper"
+    },
+    {
+      "date": "2022",
+      "tag": "Method",
+      "title": "The single-crystal diamond trap: reading the composition of high-P–T fluids",
+      "body": "Fluids move chemistry through the Earth's interior and are almost impossible to sample without changing them on the way out. This method uses a single diamond crystal to trap a fluid at pressure and temperature and recover it intact for analysis, avoiding the contamination and quench problems of the layered-powder traps in general use. Contributions to Mineralogy and Petrology.",
+      "image": "fig-scdt.jpg",
+      "link": "https://doi.org/10.1007/s00410-021-01882-6",
+      "linkText": "Read the paper"
+    },
+    {
+      "date": "2022",
+      "tag": "Instrument",
+      "title": "A modified multi-anvil assembly with a lanthanum chromite heater",
+      "body": "An 18 mm edge-length assembly redesigned at the Bayerisches Geoinstitut with a thicker LaCrO₃ resistive heater, for longer runs at stable high temperature. Most of experimental petrology is this: the measurement you want is only as good as the small ceramic object you build to make it possible.",
+      "image": "fig-ma-assembly.jpg",
+      "link": "",
+      "linkText": ""
+    },
+    {
+      "date": "2021",
+      "tag": "Publication",
+      "title": "Sulphur content at sulphide saturation of peridotite melt at upper-mantle conditions",
+      "body": "How much sulphur a mantle melt can hold before a sulphide liquid separates from it, measured in multi-anvil experiments. The number decides whether sulphur — and the metals that follow it — stays behind in the mantle or travels with the melt. American Mineralogist.",
+      "image": "fig-sulphur-core.jpg",
+      "link": "https://doi.org/10.2138/am-2021-7649",
+      "linkText": "Read the paper"
+    },
+    {
+      "date": "2016 – 2017",
+      "tag": "Master's project",
+      "title": "Sulphide–silicate partitioning of W, Mo, Ni and Co at 7–11 GPa",
+      "body": "If an iron sulphide liquid segregated to the core alongside iron metal, what would it have taken with it? Primitive-mantle peridotite and FeS doped with tungsten, molybdenum, nickel and cobalt were equilibrated in a multi-anvil press at 2,000–2,350 °C in single-crystal MgO capsules, for about five minutes, then analysed by electron microprobe and laser-ablation ICP-MS. Nickel and cobalt follow the sulphide strongly; tungsten barely at all; molybdenum more than tungsten — which is one way to explain the Mo/W ratio of the Earth's mantle. Presented as a poster at the Bayerisches Geoinstitut.",
+      "image": "fig-metal-silicate.jpg",
+      "link": "",
+      "linkText": ""
+    },
+    {
+      "date": "2016",
+      "tag": "Master's project",
+      "title": "Imaging single dislocations in minerals with electron channelling contrast",
+      "body": "Electron channelling contrast imaging had been used almost only on metals. In an ordinary field-emission SEM, by tilting a crystal by fractions of a degree into a two-beam condition found from its electron backscatter pattern, individual dislocations in deformed ferropericlase and stacking faults in a Moncaup augite were imaged without cutting a TEM foil. Whether a defect shows up depends on the structure factor of the band chosen — a 22 % band showed nothing, a 69 % band showed everything. Became Miyajima et al., European Journal of Mineralogy.",
+      "image": "note-dislocations.jpg",
+      "link": "https://doi.org/10.1127/ejm/2017/0029-2683",
+      "linkText": "Read the paper"
+    }
+  ]
+}

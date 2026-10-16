@@ -1,0 +1,179 @@
+{
+  "_README": [
+    "The 'descent' rail on the home page. As the reader scrolls down the page they go down into the Earth,",
+    "and each stop is an instrument from your career, ordered by the pressure it reaches.",
+    "  name    the instrument (short)",
+    "  pt      its pressure and temperature reach, as you would say it",
+    "  depth   the depth in the Earth that pressure corresponds to (km); the readout counts up to it",
+    "  where   what is there (one or two words)",
+    "  color   the colour the rail turns at that stop (cool at the surface, incandescent at the core)",
+    "Keep them in order of increasing pressure. The first entry is the surface.",
+    "Keep them in order of increasing pressure. The first entry is the surface. A stop may go beyond the Earth: give it 'gpa' and 'tc' (its pressure in GPa and temperature in °C) and 'planet': 'jupiter' and the cutaway Earth gives way to that planet.",
+    "earth.layers   the layers drawn in the cutaway, with top and bottom depth (km) and colour.",
+    "earth.profile  depth (km) -> pressure (GPa) and temperature (°C) inside the Earth, used for the gauges (PREM + a typical geotherm).",
+    "The terapascal figure is from Dubrovinskaia et al., 'Terapascal static pressure generation with ultrahigh yield strength nanodiamond', Science Advances 2, e1600341 (2016) — double-stage DAC, Bayreuth."
+  ],
+  "stops": [
+    {
+      "name": "The surface",
+      "pt": "1 atmosphere, room temperature",
+      "depth": 0,
+      "where": "where the volcano is",
+      "color": "#3b82f6"
+    },
+    {
+      "name": "Cold-seal pressure vessel",
+      "pt": "to 0.2 GPa and 850 °C",
+      "depth": 7,
+      "where": "the volcanic conduit",
+      "color": "#22c1c3"
+    },
+    {
+      "name": "TZM rapid-quench vessel",
+      "pt": "to 0.3 GPa and 1,100 °C",
+      "depth": 10,
+      "where": "the magma chamber",
+      "color": "#9be15d"
+    },
+    {
+      "name": "Piston cylinder",
+      "pt": "to 4 GPa and 2,000 °C",
+      "depth": 120,
+      "where": "base of the lithosphere",
+      "color": "#ffd166"
+    },
+    {
+      "name": "Paris–Edinburgh press",
+      "pt": "to 10 GPa and 2,000 °C",
+      "depth": 300,
+      "where": "the upper mantle",
+      "color": "#ff8c42"
+    },
+    {
+      "name": "Multi-anvil press",
+      "pt": "to 25 GPa and 2,500 °C",
+      "depth": 750,
+      "where": "the transition zone",
+      "color": "#ff3d00"
+    },
+    {
+      "name": "Diamond anvil cell",
+      "pt": "beyond 300 GPa and 5,000 °C with laser heating",
+      "depth": 6371,
+      "where": "the centre of the Earth",
+      "color": "#ff7a7a"
+    },
+    {
+      "name": "Double-stage diamond anvil cell",
+      "pt": "about 1 TPa (1,000 GPa) with nanodiamond second-stage anvils",
+      "depth": 6371,
+      "gpa": 1000,
+      "tc": 10000,
+      "where": "deep inside Jupiter, in metallic hydrogen",
+      "planet": "jupiter",
+      "color": "#ffffff"
+    }
+  ],
+  "earth": {
+    "profile": [
+      [
+        0,
+        0,
+        20
+      ],
+      [
+        10,
+        0.3,
+        250
+      ],
+      [
+        35,
+        1,
+        600
+      ],
+      [
+        120,
+        4,
+        1300
+      ],
+      [
+        300,
+        10,
+        1500
+      ],
+      [
+        410,
+        14,
+        1550
+      ],
+      [
+        660,
+        24,
+        1650
+      ],
+      [
+        1000,
+        38,
+        1900
+      ],
+      [
+        2000,
+        85,
+        2300
+      ],
+      [
+        2890,
+        136,
+        3700
+      ],
+      [
+        5150,
+        330,
+        5500
+      ],
+      [
+        6371,
+        364,
+        5700
+      ]
+    ],
+    "layers": [
+      {
+        "name": "crust and lithosphere",
+        "top": 0,
+        "bottom": 120,
+        "color": "#6e5a3f"
+      },
+      {
+        "name": "upper mantle",
+        "top": 120,
+        "bottom": 410,
+        "color": "#8c5a2e"
+      },
+      {
+        "name": "transition zone",
+        "top": 410,
+        "bottom": 660,
+        "color": "#a9542a"
+      },
+      {
+        "name": "lower mantle",
+        "top": 660,
+        "bottom": 2890,
+        "color": "#c24d1f"
+      },
+      {
+        "name": "outer core",
+        "top": 2890,
+        "bottom": 5150,
+        "color": "#f28a2a"
+      },
+      {
+        "name": "inner core",
+        "top": 5150,
+        "bottom": 6371,
+        "color": "#ffe4b0"
+      }
+    ]
+  }
+}

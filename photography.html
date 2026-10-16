@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Photography — Sumith Abeykoon</title>
+<meta name="description" content="Photographs by Sumith Abeykoon — mountains, wildlife, a comet — organised by the trips they came from.">
+<link rel="canonical" href="https://sumithabeykoon.com/photography.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sumithabeykoon.com/photography.html">
+<meta property="og:title" content="Photography — Sumith Abeykoon">
+<meta property="og:description" content="Photographs by Sumith Abeykoon — mountains, wildlife, a comet — organised by the trips they came from.">
+<meta property="og:image" content="https://sumithabeykoon.com/images/web/mtn-05.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Newsreader:ital,opsz,wght@0,6..72,200;0,6..72,300;0,6..72,400;1,6..72,200;1,6..72,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header" id="siteHeader">
+  <div class="wrap wrap--wide site-header__inner">
+    <a class="brand" href="index.html">Sumith Abeykoon</a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="nav" aria-label="Menu">☰</button>
+    <nav class="nav" id="nav">
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="publications.html">Publications</a>
+      <a href="photography.html" aria-current="page">Photography</a>
+      <a href="life.html">Life</a>
+      <a href="writing.html">Writing</a>
+      <a href="index.html#contact" class="nav__cta">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <div class="wrap wrap--wide page-head page-head--split">
+    <div>
+      <span class="eyebrow">Photography</span>
+      <h1>Mostly a tele lens, pointed at whatever I find beautiful</h1>
+      <p class="lede">Photography is how I keep track of my memories. The best of them have never needed a camera.</p>
+    </div>
+    <figure class="page-head__fig reveal">
+      <img src="images/web/close-16-s.jpg" srcset="images/web/close-16-s.jpg 900w, images/web/close-16.jpg 2000w" sizes="(min-width: 900px) 30vw, 100vw" width="2000" height="1325" alt="A blue tit on a bare branch, three branches in" fetchpriority="high">
+      <figcaption>Blue tit, Nancy</figcaption>
+    </figure>
+  </div>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="prose stack">
+        <p>I grew up reading, in a house without screens, and I built a picture of the world in my head that was more detailed than the world itself. I think that is why I photograph the way I do: not to record that I was somewhere, but to get close enough to see the detail I was already imagining.</p>
+        <p>So when I stop on a walk, it can be for anything: a ridge catching the first light, a bird three branches in, something small and strange at the side of the path. The tele lens does all of it — it brings a far summit close and it finds the detail in a flower. Whatever it is, I will work the camera settings until the colour and the detail come out properly. I do very little afterwards. I would rather get it right while I am standing there.</p>
+        <p class="quiet small">A DSLR and a tele lens. That is all that needs saying about equipment.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--sunken" style="padding-block:clamp(3rem,7vw,4.5rem);">
+    <div class="wrap wrap--narrow">
+      <p class="quiet small mt-0">A note on how this is arranged: I do not really have a single favourite photograph. What I have are <em>sessions</em> — a trip, a morning, a walk — and from each one, the shot that turned out best. So that is how these are grouped. The larger images are the pick of that day.</p>
+    </div>
+  </section>
+
+  <!-- Gallery is rendered from data/photos.json -->
+  <div class="wrap wrap--wide" id="gallery"></div>
+
+  <section class="section">
+    <div class="wrap wrap--narrow">
+      <p class="quiet small">Photographs are mine. If you would like to use one, <a href="index.html#contact" style="color:var(--ink-strong);">just ask</a> — the answer is usually yes.</p>
+    </div>
+  </section>
+
+</main>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photograph">
+  <div class="lightbox__zoom">
+    <button class="lightbox__btn lightbox__zin" aria-label="Zoom in" title="Zoom in (+)">+</button>
+    <button class="lightbox__btn lightbox__zout" aria-label="Zoom out" title="Zoom out (−)">−</button>
+    <button class="lightbox__btn lightbox__zreset" aria-label="Reset zoom" title="Fit (0)">⤢</button>
+  </div>
+  <button class="lightbox__btn lightbox__close" aria-label="Close">✕</button>
+  <button class="lightbox__btn lightbox__prev" aria-label="Previous">‹</button>
+  <div class="lightbox__stage"><img alt=""></div>
+  <button class="lightbox__btn lightbox__next" aria-label="Next">›</button>
+  <div class="lightbox__bar"><span class="lightbox__cap"></span><span class="lightbox__count"></span><span class="lightbox__hint">scroll or double-click to zoom · drag to pan</span></div>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap wrap--wide">
+    <div class="site-footer__grid">
+      <div>
+        <h4>Sumith Abeykoon</h4>
+        <p class="small quiet" style="max-width:34ch;">Experimental geoscientist at the Italian National Research Council. Sri Lankan, living in Rome. Still curious about absolutely everything.</p>
+      </div>
+      <div>
+        <h4>Pages</h4>
+        <ul class="footer-nav">
+          <li><a href="research.html">Research</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="photography.html">Photography</a></li>
+          <li><a href="life.html">Life</a></li>
+          <li><a href="writing.html">Writing</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Find me</h4>
+        <ul class="footer-nav">
+          <li><a href="mailto:sumith.abeykoon@cnr.it">sumith.abeykoon@cnr.it</a></li>
+          <li><a href="https://orcid.org/0000-0002-9060-6203" rel="me noopener">ORCID</a></li>
+          <li><a href="https://scholar.google.com/citations?user=WQhIz70AAAAJ&hl=en" rel="me noopener">Google Scholar</a></li>
+          <li><a href="https://www.linkedin.com/in/sumith-abeykoon-b502681b6/" rel="me noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© <span id="year">2026</span> Sumith Abeykoon. Photographs are my own.</span>
+      <span>No trackers. No analytics. Nothing here is counting you.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
