@@ -696,7 +696,7 @@ a.theme-card:hover .theme-card__media img { transform: scale(1.04); }
 .earth__probe { stroke: #fff; stroke-width: 0.8; stroke-dasharray: 1.5 1.5; opacity: 0.8; }
 .earth__dot { fill: #fff; stroke: var(--dc); stroke-width: 1.4; filter: drop-shadow(0 0 3px #fff); }
 .earth__ring--here { stroke: #fff; stroke-width: 0.9; }
-@media (max-width: 1699px) { .descent__tool, .descent__bars { display: none; } .descent__globe { width: 4.6rem; height: 4.6rem; } .descent__gauges { width: auto; } .descent__depth { font-size: 1.25rem; } .descent__where { font-size: 0.68rem; } }
+@media (max-width: 1699px) { .descent__read { gap: 0.7rem; padding: 0.6rem 0.75rem 0.6rem 0.6rem; } .descent__globe { width: 5.4rem; height: 5.4rem; } .descent__gauges { width: 8.5rem; } .descent__depth { font-size: 1.3rem; } .descent__where { font-size: 0.66rem; max-width: 8.5rem; } .descent__tool { font-size: 0.7rem; max-width: 8.5rem; } .descent__bars { gap: 0.6rem; } .descent__bar { min-height: 3.6rem; } }
 @media (max-width: 1279px) { .descent__read { display: none; } .descent { left: 0.75rem; } }
 @media (max-width: 760px) {
   .descent { left: 0; top: 0; transform: none; width: 100%; }
@@ -735,7 +735,7 @@ a.theme-card:hover .theme-card__media img { transform: scale(1.04); }
 .hero__meta a:hover { color: var(--ember-bright); }
 
 /* leave room for the descent panel on the left */
-@media (min-width: 1280px) { .has-descent main > * { padding-left: 11rem; } }
+@media (min-width: 1280px) { .has-descent main > * { padding-left: 20rem; } }
 @media (min-width: 1700px) { .has-descent main > * { padding-left: 25rem; } }
 
 /* two figures side by side */

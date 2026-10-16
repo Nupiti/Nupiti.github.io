@@ -259,16 +259,19 @@
     if (!items.length) return;
     var gap = parseFloat(getComputedStyle(container).gap) || 8;
     var W = container.clientWidth;
+    if (!W) return;
     var row = [], rowW = 0;
     function flush(last) {
       if (!row.length) return;
       var totalGap = gap * (row.length - 1);
-      var scale = last && row.length < 3 ? 1 : (W - totalGap) / rowW;
+      var scale = (W - totalGap) / rowW;
+      /* last row: stretch it to the edge unless that would blow the pictures up absurdly */
+      if (last && scale > 1.6) scale = 1;
       var h = targetH * scale;
       row.forEach(function (it) {
         var ar = parseFloat(it.dataset.ar);
-        it.style.width = (ar * h) + 'px';
-        it.style.height = h + 'px';
+        it.style.width = Math.floor(ar * h) + 'px';   /* floor: never a pixel too wide, or the last one wraps */
+        it.style.height = Math.round(h) + 'px';
         it.style.flexGrow = '0';
       });
       row = []; rowW = 0;
@@ -286,6 +289,12 @@
     var vw = window.innerWidth;
     var target = vw < 560 ? 150 : vw < 900 ? 190 : 240;
     document.querySelectorAll('.justified').forEach(function (c) { layoutJustified(c, target); });
+  }
+  if (window.ResizeObserver) {
+    var ro = new ResizeObserver(function () { relayoutAll(); });
+    document.addEventListener('gallery:ready', function () {
+      document.querySelectorAll('.justified').forEach(function (c) { ro.observe(c); });
+    });
   }
 
   if (galleryRoot) {
@@ -329,6 +338,8 @@
       }).join('');
 
       relayoutAll();
+      document.dispatchEvent(new Event('gallery:ready'));
+      requestAnimationFrame(relayoutAll);
       var t; window.addEventListener('resize', function () { clearTimeout(t); t = setTimeout(relayoutAll, 120); });
     }).catch(function (err) {
       console.error(err);
