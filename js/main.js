@@ -725,4 +725,16 @@
     arm();
   })();
 
+  /* External links (and PDFs) open in a new tab; works for links added later too */
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href]');
+    if (!a || a.target) return;
+    var url;
+    try { url = new URL(a.getAttribute('href'), location.href); } catch (err) { return; }
+    if (!/^https?:$/.test(url.protocol)) return;
+    var external = url.hostname !== location.hostname;
+    var pdf = /\.pdf$/i.test(url.pathname);
+    if (external || pdf) { a.target = '_blank'; a.rel = 'noopener'; }
+  }, true);
+
 })();
