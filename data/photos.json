@@ -69,10 +69,6 @@
           "caption": "Dusk, with the moon rising"
         },
         {
-          "file": "mtn-14.jpg",
-          "caption": "Inside the glacier, Mer de Glace"
-        },
-        {
           "file": "mtn-15.jpg",
           "caption": "Green valley below the Aiguilles"
         },
@@ -101,20 +97,8 @@
           "caption": "A ridge in the Monti Sibillini"
         },
         {
-          "file": "mtn-21.jpg",
-          "caption": "The ridge line, Sibillini"
-        },
-        {
           "file": "mtn-22.jpg",
           "caption": "Ridge after ridge, Sibillini"
-        },
-        {
-          "file": "mtn-23.jpg",
-          "caption": "The valley wall"
-        },
-        {
-          "file": "mtn-24.jpg",
-          "caption": "Monte Vettore"
         },
         {
           "file": "mtn-25.jpg",
@@ -127,9 +111,9 @@
       ]
     },
     {
-      "title": "Small things, long lens",
+      "title": "Fur, feather, petal",
       "place": "Wherever I happen to stop",
-      "note": "Most of the time I am not looking at the view. I am looking for something the size of a thumb, three branches in. A long lens is not really equipment — it is the same impulse that made me want to see the detail in everything I read as a child, pointed at a living thing that will be gone in a second.",
+      "note": "Most of the time I am not looking at the view. I am looking for something the size of a thumb, fifty metres away and three branches in. A long lens is not really equipment — it is the same impulse that made me want to see the detail in everything I read as a child, pointed at a living thing that will be gone in a second.",
       "photos": [
         {
           "file": "close-01.jpg",
@@ -283,12 +267,20 @@
         {
           "file": "close-38.jpg",
           "caption": "Golden orb weaver, Sri Lanka"
+        },
+        {
+          "file": "stone-24.jpg",
+          "caption": "Cypresses in the evening, Tuscany"
+        },
+        {
+          "file": "stone-35.jpg",
+          "caption": "Waiting, Venice"
         }
       ]
     },
     {
       "title": "The night sky",
-      "place": "Mostly from a field outside Bayreuth",
+      "place": "From a field outside Bayreuth",
       "note": "Comet NEOWISE came past in the summer of 2020 and will not be back for about six thousand years. There is only one chance at a thing like that: set up, work the settings until the detail appears, and do not touch it afterwards.",
       "photos": [
         {
@@ -377,10 +369,6 @@
           "caption": "Elephants, resting"
         },
         {
-          "file": "sl-10.jpg",
-          "caption": "Sunrise on the east coast"
-        },
-        {
           "file": "sl-15.jpg",
           "caption": "Ruwanwelisaya, Anuradhapura"
         },
@@ -431,14 +419,6 @@
         {
           "file": "etna-06.jpg",
           "caption": "The road across the cones"
-        },
-        {
-          "file": "etna-07.jpg",
-          "caption": "Cones and ash"
-        },
-        {
-          "file": "etna-08.jpg",
-          "caption": "A scoria cone above the refuge"
         },
         {
           "file": "etna-05.jpg",
@@ -497,16 +477,8 @@
           "caption": "Lanterns over the street"
         },
         {
-          "file": "bay-07.jpg",
-          "caption": "An orange tree, indoors"
-        },
-        {
           "file": "bay-08.jpg",
           "caption": "Cows in the snow"
-        },
-        {
-          "file": "bay-09.jpg",
-          "caption": "Bayreuth"
         },
         {
           "file": "bay-10.jpg",
@@ -539,10 +511,6 @@
         {
           "file": "stone-03.jpg",
           "caption": "Across the Tiber"
-        },
-        {
-          "file": "stone-04.jpg",
-          "caption": "Along the Tiber"
         },
         {
           "file": "stone-05.jpg",
@@ -621,10 +589,6 @@
           "caption": "A tower in Tuscany"
         },
         {
-          "file": "stone-24.jpg",
-          "caption": "Tuscany"
-        },
-        {
           "file": "stone-25.jpg",
           "caption": "Venice, with nobody in it"
         },
@@ -661,10 +625,6 @@
           "caption": "Inside"
         },
         {
-          "file": "stone-35.jpg",
-          "caption": "Waiting"
-        },
-        {
           "file": "stone-36.jpg",
           "caption": "Murano glass"
         },
@@ -683,10 +643,6 @@
         {
           "file": "stone-40.jpg",
           "caption": "Château de Chambord"
-        },
-        {
-          "file": "stone-42.jpg",
-          "caption": "The lantern tower, Chambord"
         },
         {
           "file": "stone-43.jpg",
@@ -728,13 +684,17 @@
     },
     {
       "title": "The sea",
-      "place": "Sardinia, Trieste",
+      "place": "Sardinia, Trieste, Sri Lanka",
       "note": "A bicycle, a coast road, and the light going down over water. Not every photograph needs to be about anything.",
       "photos": [
         {
           "file": "sea-01.jpg",
           "caption": "Sunset over the gulf, Sardinia",
           "pick": true
+        },
+        {
+          "file": "sl-10.jpg",
+          "caption": "Sunrise on the east coast, Sri Lanka"
         },
         {
           "file": "sea-02.jpg",
@@ -821,10 +781,6 @@
           "caption": "The sun going into the Adriatic"
         },
         {
-          "file": "sea-22.jpg",
-          "caption": "Lamp and the setting sun"
-        },
-        {
           "file": "sea-23.jpg",
           "caption": "Alone on the jetty"
         }
@@ -867,10 +823,6 @@
           "file": "fig-accretion.jpg",
           "caption": "How the Earth put itself together, from accretion to the air we breathe",
           "pick": true
-        },
-        {
-          "file": "small-earth-clean.jpg",
-          "caption": "A core and a mantle, one millimetre across"
         },
         {
           "file": "fig-subduction.jpg",

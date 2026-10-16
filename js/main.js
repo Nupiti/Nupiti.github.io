@@ -368,7 +368,7 @@
       var item = lightboxItems[current];
       resetZoom();
       lbImg.src = item.src; lbImg.alt = item.caption || '';
-      lbCap.textContent = item.caption ? item.caption + '  —  ' + item.place : item.place;
+      lbCap.textContent = item.caption || '';
       if (lbCount) lbCount.textContent = (current + 1) + ' / ' + lightboxItems.length;
       preload(current + 1); preload(current - 1);
     }
