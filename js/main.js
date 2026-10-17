@@ -735,7 +735,7 @@
           dot.setAttribute('cx', C + rr * cs); dot.setAttribute('cy', C + rr * cs);
           probe.setAttribute('x1', C + R * cs); probe.setAttribute('y1', C + R * cs); probe.setAttribute('x2', C + rr * cs); probe.setAttribute('y2', C + rr * cs);
         }
-        descent.classList.toggle('is-on', window.scrollY > 120);
+        descent.classList.add('is-on');
       }
       window.addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
       window.addEventListener('resize', update);
