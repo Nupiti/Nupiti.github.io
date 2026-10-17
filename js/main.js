@@ -362,7 +362,7 @@
         }).join('') + '</div>' : '';
 
         return '<section class="session">' +
-          '<div class="session__head"><h2>' + esc(s.title) + '</h2>' + (s.place ? '<span class="session__place">' + esc(s.place) + '</span>' : '') + '</div>' +
+          '<div class="session__head"><h2>' + esc(s.title) + '</h2></div>' +
           (s.note ? '<p class="session__note">' + esc(s.note) + '</p>' : '') +
           featureHTML + gridHTML + '</section>';
       }).join('');

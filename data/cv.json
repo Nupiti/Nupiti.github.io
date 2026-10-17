@@ -1,0 +1,66 @@
+{
+  "_README": [
+    "Feeds tools/make-cv.py, which writes files/CV_Sumith_Abeykoon.pdf.",
+    "Career positions, publications, beamtimes and grants are NOT in here: they come from",
+    "data/career.json, data/publications.json, data/beamtimes.json and data/research-notes.json,",
+    "so the CV follows the website. Edit here only the things the website does not hold.",
+    "Then double-click make-cv.bat (or run: python tools/make-cv.py)."
+  ],
+  "name": "Sumith Abeykoon",
+  "headline": "Experimental geoscientist · Petrology and volcanology",
+  "contact": {
+    "email": "sumith.abeykoon@cnr.it",
+    "web": "sumithabeykoon.com",
+    "orcid": "0000-0002-9060-6203",
+    "affiliation": "CNR-ISSMC, Faenza · CNR research unit (Unità di Ricerca presso Terzi) and GLASS lab, Roma Tre University, Rome",
+    "web_url": "https://sumithabeykoon.com",
+    "orcid_url": "https://orcid.org/0000-0002-9060-6203"
+  },
+  "summary": "Experimental geoscientist specialising in petrology and volcanology. I recreate the conditions of planetary interiors in the laboratory and combine high-pressure, high-temperature experiments with a broad suite of analytical techniques to study how deep planetary processes regulate magmatic systems, volcanic activity and planetary evolution.",
+  "competencies": [
+    "Synthesis of silicate glasses and melts for experiments",
+    "High-P–T experimental techniques: operation, installation, calibration and management",
+    "Chemical and structural characterisation of silicate materials, experimental and natural",
+    "Thermal analysis of silicate glasses and melts",
+    "Characterisation of volcanic products by 3D microtomography (porosity and texture)",
+    "Planning, designing and executing in situ experiments at synchrotron and neutron facilities"
+  ],
+  "education_notes": {
+    "2018 – 2022": "German–Japanese IRTG “Deep Earth Volatile Cycles”. Thesis: Experimental constraints on the compositions of sulphides and aqueous fluids in the Earth’s interior. Committee: D. J. Frost, C. McCammon, A. Audétat.",
+    "2016 – 2018": "Thesis: Oxygen content of mantle sulphides. Supervisors: V. Laurenz, D. J. Frost.",
+    "2008 – 2013": "Thesis: Effect of forest management on soil carbon sequestration, Maragamuwa biodiversity conservation site, Naula."
+  },
+  "skip_positions": [
+    "Paris, finding my way"
+  ],
+  "skills": {
+    "Experimental": "Multi-anvil apparatus; piston cylinder; Paris–Edinburgh cell; cold-seal and TZM rapid-quench pressure vessels; gas-mixing furnace",
+    "Analytical": "EPMA; SEM; LA-ICP-MS; Raman spectroscopy; conventional and flash DSC, TGA, TMA; in situ high-P–T neutron diffraction; powder XRD; Mössbauer spectroscopy; synchrotron and laboratory micro-CT"
+  },
+  "technical": [
+    "Testing and commissioning of an automated end-loaded piston cylinder (MAVO PRESS LPC 250–300/50, Voggenreiter) at CRPG, Nancy",
+    "Troubleshooting and repair of a QUICKpress piston cylinder (Depths of the Earth) at the University of Camerino",
+    "Design and testing of a modified 18 mm multi-anvil assembly with a LaCrO₃ resistive heater, Bayerisches Geoinstitut",
+    "Design and testing of a modified Paris–Edinburgh cell for high-P–T experiments at SOLEIL (PSICHE) and ESRF (ID27)"
+  ],
+  "prizes": [
+    "SIMP Doctoral Thesis Prize 2024 (Miglior Tesi di Dottorato), Società Italiana di Mineralogia e Petrologia, Bari, September 2024"
+  ],
+  "supervision": [
+    "Co-supervision, master’s research project, Bayerisches Geoinstitut, 2022–2023: the role of NiS in controlling the oxygen content of sulphide melts in the upper mantle",
+    "Co-supervision, master’s (M2) research project, CRPG Nancy, 2024: Raman spectroscopy of melt inclusions in volcanic rocks"
+  ],
+  "conferences": [
+    "EMPG XIX, Orléans, 2025 — two posters (Agnano–Monte Spina trachyte melt structure and viscosity; trace-element partitioning along nephelinite and melilitite liquid lines of descent)",
+    "WITec Raman microscopy advanced training, Ulm, 2024",
+    "6ª Conferenza Alfred Rittmann, Catania, 2024",
+    "EGU General Assembly, Vienna, 2024 — poster on fractional crystallisation of melilitite and Mg-nephelinite at 1 GPa and carbonatite petrogenesis",
+    "EMPG XVIII, Milan, 2023 — poster on carbonatite petrogenesis",
+    "International School “Understanding Oxygen Fugacity in Geoscience”, Trieste, 2022",
+    "Goldschmidt 2021 (online) — talk on deuterium in iron sulphide and the oxidation of the early mantle",
+    "EGU General Assembly 2020 (online) — talk on sulphide oxygen content as a mantle geothermometer",
+    "GeoMünster 2019 and Goldschmidt 2019, Barcelona — talks on a sulphide-inclusion geothermometer",
+    "International Workshop on Deep Volatile Cycling, Tokyo, 2019 — talk on the single-crystal diamond trap",
+    "JpGU 2019, Chiba — poster; Goldschmidt 2017, Paris — poster on sulphide–silicate partitioning"
+  ]
+}

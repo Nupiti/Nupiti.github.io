@@ -1,6 +1,0 @@
-Export your CV to PDF and save it here with exactly this name:
-
-  CV_Sumith_Abeykoon.pdf
-
-The download links on the site already point at it. Overwrite the file each
-time you update the CV and every link keeps working.
