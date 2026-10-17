@@ -213,21 +213,51 @@
       var notes = data.notes || [];
 
       if (notesRoot) {
-        notesRoot.innerHTML = notes.length ? '<div class="notes-feed">' + notes.map(function (n) {
-          var left = n.image
-            ? '<div class="note__figure' + (/^fig-/.test(n.image) ? ' note__figure--plate' : '') + '"><img src="' + IMG + esc(small(n.image)) + '" srcset="' + esc(srcset(n.image)) + '" sizes="(min-width: 820px) 14rem, 100vw" alt="" loading="lazy"></div>'
-            : '<div class="note__aside">' + esc(n.date || '') + '</div>';
+        /* Grid of cards + filter buttons; the full text opens in a panel. */
+        var groups = [
+          ['all', 'All'], ['Publication', 'Publications'], ['Beamtime', 'Beamtimes'], ['Grant|Project', 'Grants & projects'],
+          ['Method|Instrument', 'Methods & instruments'], ["Master's project", "Master's projects"]
+        ];
+        function firstLine(t) { var m = (t || '').match(/^.*?[.!?](\s|$)/); return m ? m[0].trim() : (t || ''); }
+        var cards = notes.map(function (n, i) {
+          var fig = n.image
+            ? '<div class="hcard__figure' + (/^fig-/.test(n.image) ? ' hcard__figure--plate' : '') + '"><img src="' + IMG + esc(small(n.image)) + '" srcset="' + esc(srcset(n.image)) + '" sizes="(min-width: 900px) 30vw, (min-width: 620px) 45vw, 100vw" alt="" loading="lazy"></div>'
+            : '';
+          return '<button type="button" class="hcard" data-i="' + i + '" data-tag="' + esc(n.tag || '') + '">' + fig +
+            '<div class="hcard__body"><div class="note__meta">' +
+              (n.tag ? '<span class="note__tag">' + esc(n.tag) + '</span>' : '') +
+              (n.date ? '<span class="note__date">' + esc(n.date) + '</span>' : '') + '</div>' +
+              '<h3 class="hcard__title">' + esc(n.title) + '</h3>' +
+              '<p class="hcard__text">' + esc(firstLine(n.body)) + '</p>' +
+              '<span class="hcard__more">Read more</span></div></button>';
+        });
+        notesRoot.innerHTML = notes.length ?
+          '<div class="hfilters" role="group" aria-label="Filter highlights">' + groups.map(function (g, k) {
+            return '<button type="button" class="hfilter' + (k ? '' : ' is-on') + '" data-f="' + esc(g[0]) + '">' + esc(g[1]) + '</button>';
+          }).join('') + '</div>' +
+          '<div class="hgrid">' + cards.join('') + '</div>' +
+          '<div class="hpanel" id="hpanel" role="dialog" aria-modal="true" hidden><div class="hpanel__box">' +
+            '<button type="button" class="hpanel__close" aria-label="Close">×</button><div class="hpanel__content"></div></div></div>' : '';
+
+        var grid = notesRoot.querySelector('.hgrid'), panel = notesRoot.querySelector('.hpanel'), content = panel.querySelector('.hpanel__content');
+        notesRoot.querySelector('.hfilters').addEventListener('click', function (e) {
+          var b = e.target.closest('.hfilter'); if (!b) return;
+          notesRoot.querySelectorAll('.hfilter').forEach(function (x) { x.classList.toggle('is-on', x === b); });
+          var f = b.dataset.f, re = f === 'all' ? null : new RegExp('^(' + f + ')$');
+          grid.querySelectorAll('.hcard').forEach(function (c) { c.hidden = !!(re && !re.test(c.dataset.tag)); });
+        });
+        function openNote(i) {
+          var n = notes[i]; if (!n) return;
+          var fig = n.image ? '<div class="hpanel__figure' + (/^fig-/.test(n.image) ? ' hcard__figure--plate' : '') + '"><img src="' + IMG + esc(n.image) + '" alt=""></div>' : '';
           var link = n.link ? '<p class="note__link"><a class="link-out" href="' + esc(n.link) + '" rel="noopener">' + esc(n.linkText || 'Read the paper') + '</a></p>' : '';
-          var meta = [];
-          if (n.tag) meta.push('<span class="note__tag">' + esc(n.tag) + '</span>');
-          if (n.date && n.image) meta.push('<span class="note__date">' + esc(n.date) + '</span>');
-          return '<article class="note' + (n.image ? '' : ' note--nofig') + '">' + left +
-            '<div class="note__body">' +
-              (meta.length ? '<div class="note__meta">' + meta.join('') + '</div>' : '') +
-              '<h3 class="note__title">' + esc(n.title) + '</h3>' +
-              '<p class="note__text">' + esc(n.body) + '</p>' + link +
-            '</div></article>';
-        }).join('') + '</div>' : '';
+          content.innerHTML = fig + '<div class="note__meta">' + (n.tag ? '<span class="note__tag">' + esc(n.tag) + '</span>' : '') + (n.date ? '<span class="note__date">' + esc(n.date) + '</span>' : '') + '</div>' +
+            '<h3 class="note__title">' + esc(n.title) + '</h3><p class="note__text">' + esc(n.body) + '</p>' + link;
+          panel.hidden = false; document.body.style.overflow = 'hidden'; panel.querySelector('.hpanel__close').focus();
+        }
+        function closeNote() { panel.hidden = true; document.body.style.overflow = ''; }
+        grid.addEventListener('click', function (e) { var c = e.target.closest('.hcard'); if (c) openNote(+c.dataset.i); });
+        panel.addEventListener('click', function (e) { if (e.target === panel || e.target.closest('.hpanel__close')) closeNote(); });
+        document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !panel.hidden) closeNote(); });
       }
 
       if (homeHl) {
