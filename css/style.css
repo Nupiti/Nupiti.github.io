@@ -676,6 +676,29 @@ a.theme-card:hover .theme-card__media img { transform: scale(1.04); }
 .map-pin--home { fill: var(--ember); }
 .map-pin--facility { fill: var(--slate); }
 .map-pin--work { fill: #d9c9a8; }
+/* People / Places tabs on the co-author section */
+.viewtabs { display: flex; align-items: center; gap: 0.5rem; margin: 0 0 1rem; }
+.viewtab { font: inherit; font-size: var(--t-xs); letter-spacing: 0.06em; padding: 0.45rem 1rem; border-radius: 999px; border: 1px solid var(--hairline); background: transparent; color: var(--ink-quiet); cursor: pointer; transition: color 0.2s, border-color 0.2s, background 0.2s; }
+.viewtab:hover { color: var(--ink-strong); border-color: var(--ink-faint); }
+.viewtab.is-on { background: var(--ink-strong); border-color: var(--ink-strong); color: var(--bg); }
+.viewtab--sm { padding: 0.35rem 0.8rem; }
+.viewtabs__zoom { margin-left: auto; display: inline-flex; gap: 0.4rem; }
+.viewtabs__zoom[hidden] { display: none; }
+/* the places map */
+.graphic--map .graphic__tip { white-space: normal; max-width: 24rem; line-height: 1.45; }
+.graphic--map svg { background: radial-gradient(60% 80% at 53% 45%, rgba(230,128,63,0.07), transparent 70%); }
+.cmap-arc { fill: none; stroke: var(--ember); stroke-width: 0.45; stroke-opacity: 0.35; stroke-linecap: round; transition: stroke-opacity 0.3s, stroke-width 0.3s; }
+.cmap-arc.is-drawn { stroke-dashoffset: 0 !important; }
+.cmap-arc.is-hot { stroke-opacity: 0.95; stroke-width: 0.9; }
+.cmap-city { fill: rgba(59,130,246,0.18); stroke: #7fb0ff; stroke-width: 0.6; cursor: default; transition: fill 0.25s, stroke 0.25s; }
+.cmap-city.is-hot, .cmap-city:hover { fill: rgba(230,128,63,0.35); stroke: var(--ember); }
+.cmap-core { fill: #7fb0ff; stroke: none; pointer-events: none; }
+.cmap-home { fill: var(--ember); stroke: var(--bg); stroke-width: 0.6; }
+.cmap-home-ring { fill: none; stroke: var(--ember); stroke-width: 0.5; opacity: 0.6; animation: cmapPulse 2.6s ease-out infinite; transform-box: fill-box; transform-origin: center; }
+@keyframes cmapPulse { 0% { transform: scale(0.4); opacity: 0.8; } 100% { transform: scale(2.6); opacity: 0; } }
+.cmap-label { font-family: var(--sans); fill: var(--ink-quiet); letter-spacing: 0.03em; pointer-events: none; }
+@media (prefers-reduced-motion: reduce) { .cmap-home-ring { animation: none; } .cmap-arc { stroke-dashoffset: 0 !important; } }
+
 .map-label { font-family: var(--sans); font-size: 4.6px; fill: var(--ink-quiet); paint-order: stroke; stroke: var(--bg-raised); stroke-width: 1.4px; stroke-linejoin: round; }
 
 /* network */

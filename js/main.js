@@ -522,6 +522,91 @@
 
   /* ---- Co-author network ---------------------------------------------- */
   var netRoot = document.getElementById('coauthorNet');
+  var netRoot = document.getElementById('coauthorNet');
+  /* ---- Co-author places: where the people on the papers work ----------- */
+  var cmapRoot = document.getElementById('coauthorMap');
+  if (cmapRoot && netRoot) {
+    var tabs = document.querySelector('.viewtabs'), zoomBox = tabs && tabs.querySelector('.viewtabs__zoom');
+    var lede = document.getElementById('coauthorLede'), ledeNet = lede ? lede.innerHTML : '';
+    var built = false, svgM, VIEWS = { world: [330, 45, 670, 380], europe: [452, 62, 150, 78] };
+    function setView(name, animate) {
+      if (!svgM) return;
+      var to = VIEWS[name], from = (svgM.getAttribute('viewBox') || '0 0 1000 520').split(' ').map(Number);
+      if (!animate) { svgM.setAttribute('viewBox', to.join(' ')); return; }
+      var t0 = performance.now(), D = 650;
+      (function step(now) {
+        var k = Math.min(1, (now - t0) / D); k = k < 0.5 ? 2 * k * k : 1 - Math.pow(-2 * k + 2, 2) / 2;
+        svgM.setAttribute('viewBox', from.map(function (a, i) { return a + (to[i] - a) * k; }).join(' '));
+        if (k < 1) requestAnimationFrame(step);
+      })(t0);
+      /* scale the city rings so they stay readable when zoomed in */
+      var k2 = name === 'europe' ? 0.4 : 1;
+      svgM.querySelectorAll('[data-r]').forEach(function (c) { c.setAttribute('r', (parseFloat(c.dataset.r) * k2).toFixed(2)); if (c.classList.contains('cmap-city')) c.style.strokeWidth = (0.6 * Math.max(k2, 0.5)) + 'px'; });
+      svgM.querySelectorAll('.cmap-label').forEach(function (t) { t.style.fontSize = (3.6 * k2).toFixed(2) + 'px'; t.setAttribute('x', (parseFloat(t.dataset.x) + (parseFloat(t.dataset.r) + 1.5) * k2).toFixed(2)); t.setAttribute('y', (parseFloat(t.dataset.y) + 1.3 * k2).toFixed(2)); });
+      svgM.querySelectorAll('.cmap-arc').forEach(function (a) { a.style.strokeWidth = (0.45 * (name === 'europe' ? 0.5 : 1)) + 'px'; });
+    }
+    function build() {
+      if (built) return; built = true;
+      Promise.all([getJSON('data/worldmap.json'), getJSON('data/coauthor-places.json')]).then(function (res) {
+        var m = res[0], d = res[1], home = d.home, places = d.places || [];
+        svgM = svgEl('svg', { viewBox: VIEWS.world.join(' '), role: 'img', 'aria-label': 'Map of where my co-authors work' });
+        svgM.appendChild(svgEl('path', { d: m.land, 'class': 'map-land' }));
+        var arcs = svgEl('g', {}), dots = svgEl('g', {}), labels = svgEl('g', {});
+        svgM.appendChild(arcs); svgM.appendChild(dots); svgM.appendChild(labels);
+        var maxP = places.reduce(function (a, p) { return Math.max(a, p.people.length); }, 1);
+        var tip = tipFor(cmapRoot);
+        places.forEach(function (p, i) {
+          /* a great-circle-ish arc: a quadratic curve bowed away from the equator */
+          var mx = (home.x + p.x) / 2, my = (home.y + p.y) / 2, dx = p.x - home.x, dy = p.y - home.y, L = Math.hypot(dx, dy);
+          var bow = Math.min(60, L * 0.22), nx = -dy / (L || 1), ny = dx / (L || 1);
+          if (ny > 0) { nx = -nx; ny = -ny; }   /* always bow upward (north) */
+          var dPath = 'M' + home.x + ',' + home.y + ' Q' + (mx + nx * bow).toFixed(1) + ',' + (my + ny * bow).toFixed(1) + ' ' + p.x + ',' + p.y;
+          var arc = svgEl('path', { d: dPath, 'class': 'cmap-arc' });
+          arcs.appendChild(arc);
+          var len = arc.getTotalLength ? arc.getTotalLength() : 400;
+          arc.style.strokeDasharray = len; arc.style.strokeDashoffset = len; arc.style.transition = 'stroke-dashoffset 1.1s ease ' + (0.15 + i * 0.03).toFixed(2) + 's, stroke-opacity 0.3s, stroke-width 0.3s';
+          var r = 2.2 + 7 * Math.sqrt(p.people.length / maxP);
+          var g = svgEl('g', { 'class': 'cmap-place' });
+          var ring = svgEl('circle', { cx: p.x, cy: p.y, r: r, 'data-r': r, 'class': 'cmap-city' });
+          var core = svgEl('circle', { cx: p.x, cy: p.y, r: 1.1, 'data-r': 1.1, 'class': 'cmap-core' });
+          g.appendChild(ring); g.appendChild(core); dots.appendChild(g);
+          if (p.people.length >= 3) { var t = svgEl('text', { x: p.x + r + 1.5, y: p.y + 1.3, 'data-x': p.x, 'data-y': p.y, 'data-r': r, 'class': 'cmap-label', style: 'font-size:3.6px' }); t.textContent = p.city; labels.appendChild(t); }
+          function on(e) {
+            arc.classList.add('is-hot'); ring.classList.add('is-hot');
+            var rect = cmapRoot.getBoundingClientRect();
+            tip.show(e.clientX - rect.left, e.clientY - rect.top,
+              '<strong>' + esc(p.city) + '</strong>, ' + esc(p.country) + '<br><span style="color:var(--ink-faint)">' + esc(p.institutions.join(' · ')) + '</span><br>' +
+              esc(p.people.join(', ')) + '<br><span style="color:var(--ink-faint)">' + p.papers + (p.papers === 1 ? ' paper together' : ' papers together') + '</span>');
+          }
+          function off() { arc.classList.remove('is-hot'); ring.classList.remove('is-hot'); tip.hide(); }
+          g.addEventListener('mouseenter', on); g.addEventListener('mousemove', on); g.addEventListener('mouseleave', off);
+          g.addEventListener('click', function (e) { if (ring.classList.contains('is-hot')) off(); else on(e); });
+        });
+        /* home */
+        svgM.appendChild(svgEl('circle', { cx: home.x, cy: home.y, r: 6, 'data-r': 6, 'class': 'cmap-home-ring' }));
+        svgM.appendChild(svgEl('circle', { cx: home.x, cy: home.y, r: 2.6, 'data-r': 2.6, 'class': 'cmap-home' }));
+        cmapRoot.insertBefore(svgM, cmapRoot.firstChild);
+        var countries = {}; places.forEach(function (p) { countries[p.country] = 1; });
+        var legend = document.getElementById('coauthorMapLegend');
+        if (legend) legend.innerHTML = '<span><i style="background:var(--ember)"></i>Rome, where the lines start</span><span><i style="background:#7fb0ff"></i>' + places.length + ' cities in ' + Object.keys(countries).length + ' countries — a bigger ring means more co-authors there</span>';
+        requestAnimationFrame(function () { requestAnimationFrame(function () { arcs.querySelectorAll('.cmap-arc').forEach(function (a) { a.classList.add('is-drawn'); }); }); });
+      }).catch(function (e) { console.error(e); cmapRoot.innerHTML = '<p class="quiet small" style="padding:1rem">The map could not be loaded.</p>'; });
+    }
+    if (tabs) tabs.addEventListener('click', function (e) {
+      var b = e.target.closest('.viewtab'); if (!b) return;
+      if (b.dataset.view) {
+        tabs.querySelectorAll('[data-view]').forEach(function (x) { x.classList.toggle('is-on', x === b); });
+        var map = b.dataset.view === 'map';
+        netRoot.hidden = map; cmapRoot.hidden = !map; if (zoomBox) zoomBox.hidden = !map;
+        if (lede) lede.innerHTML = map ? 'Where the people on those papers work, from the affiliations on the papers. Lines start from Rome; a bigger ring means more co-authors in that city. Point at a city to see who.' : ledeNet;
+        if (map) build();
+      } else if (b.dataset.zoom) {
+        tabs.querySelectorAll('[data-zoom]').forEach(function (x) { x.classList.toggle('is-on', x === b); });
+        setView(b.dataset.zoom, true);
+      }
+    });
+  }
+
   if (netRoot) {
     getJSON('data/publications.json').then(function (d) {
       var ME = /abeykoon|abekoon/i;

@@ -1,0 +1,510 @@
+{
+ "_README": [
+  "Where my co-authors work: one entry per city, built from the affiliations given on the papers (via OpenAlex) and checked by hand.",
+  "x, y are map coordinates in the same Robinson projection as data/worldmap.json; to add a city, run tools/latlon-to-xy.py LAT LON.",
+  "people: co-authors affiliated there on at least one joint paper; papers: number of joint papers involving that city.",
+  "home: where the lines start."
+ ],
+ "home": {
+  "city": "Rome",
+  "x": 532.1,
+  "y": 119.2
+ },
+ "places": [
+  {
+   "city": "Bayreuth",
+   "country": "Germany",
+   "x": 528.4,
+   "y": 93.4,
+   "institutions": [
+    "Bayerisches Geoinstitut, University of Bayreuth"
+   ],
+   "people": [
+    "A. Audétat",
+    "T. Boffa Ballaran",
+    "I. Blanchard",
+    "D. Bondar",
+    "S. Dominijanni",
+    "L. Eberhard",
+    "D. Frost",
+    "F. Heidelbach",
+    "C. Howard",
+    "A. Kurnosov",
+    "V. Laurenz",
+    "Y. Li",
+    "C. A McCammon",
+    "N. Miyajima",
+    "D. C Rubie",
+    "P. Valdivia"
+   ],
+   "papers": 10
+  },
+  {
+   "city": "Rome",
+   "country": "Italy",
+   "x": 532.2,
+   "y": 119.2,
+   "institutions": [
+    "CNR-IGAG",
+    "INGV Rome",
+    "Roma Tre University",
+    "Sapienza University of Rome"
+   ],
+   "people": [
+    "E. Califano",
+    "S. Dominijanni",
+    "F. Di Fiore",
+    "G. Giordano",
+    "G. Giuliani",
+    "S. Mollo",
+    "A. Pontesilli",
+    "C. Romano",
+    "P. Scarlato",
+    "A. Vona"
+   ],
+   "papers": 6
+  },
+  {
+   "city": "Faenza",
+   "country": "Italy",
+   "x": 530.2,
+   "y": 111.5,
+   "institutions": [
+    "CNR-ISSMC"
+   ],
+   "people": [
+    "E. Bamber",
+    "D. Bondar",
+    "L. Calabrò",
+    "S. Dominijanni",
+    "D. Di Genova",
+    "V. Stopponi",
+    "P. Valdivia"
+   ],
+   "papers": 7
+  },
+  {
+   "city": "Manchester",
+   "country": "UK",
+   "x": 494.9,
+   "y": 82.4,
+   "institutions": [
+    "University of Manchester"
+   ],
+   "people": [
+    "E. Biagioli",
+    "B. Bonechi",
+    "M. Burton",
+    "D. Neave",
+    "M. Polacci"
+   ],
+   "papers": 1
+  },
+  {
+   "city": "Manipal",
+   "country": "India",
+   "x": 708.5,
+   "y": 212.4,
+   "institutions": [
+    "Manipal Academy of Higher Education"
+   ],
+   "people": [
+    "K. Balakrishna",
+    "K. Binu",
+    "D. Ian Joshua",
+    "L. Paszek",
+    "V. Prabhakaranunni Prabhasankar"
+   ],
+   "papers": 2
+  },
+  {
+   "city": "Peradeniya",
+   "country": "Sri Lanka",
+   "x": 725.9,
+   "y": 232.3,
+   "institutions": [
+    "University of Peradeniya"
+   ],
+   "people": [
+    "R. Chandrajith",
+    "D. Chaturangani",
+    "C. Dissanayake",
+    "S. Diyabalanage"
+   ],
+   "papers": 2
+  },
+  {
+   "city": "Amritsar",
+   "country": "India",
+   "x": 700.9,
+   "y": 152.7,
+   "institutions": [
+    "Guru Nanak Dev University"
+   ],
+   "people": [
+    "K. Dadwal",
+    "A. Khanna",
+    "S. Sharma"
+   ],
+   "papers": 1
+  },
+  {
+   "city": "Camerino",
+   "country": "Italy",
+   "x": 533.4,
+   "y": 115.2,
+   "institutions": [
+    "University of Camerino"
+   ],
+   "people": [
+    "F. Arzilli",
+    "M. Robert Carroll",
+    "E. Fanesi"
+   ],
+   "papers": 3
+  },
+  {
+   "city": "Clausthal-Zellerfeld",
+   "country": "Germany",
+   "x": 525.1,
+   "y": 87.6,
+   "institutions": [
+    "Clausthal University of Technology"
+   ],
+   "people": [
+    "J. Deubener",
+    "S. Meyer",
+    "A. Zandonà"
+   ],
+   "papers": 1
+  },
+  {
+   "city": "Fuchu, Tokyo",
+   "country": "Japan",
+   "x": 868.4,
+   "y": 139.5,
+   "institutions": [
+    "Tokyo University of Agriculture and Technology"
+   ],
+   "people": [
+    "Y. Ono",
+    "C. Watai",
+    "I. Watanabe"
+   ],
+   "papers": 3
+  },
+  {
+   "city": "Sendai",
+   "country": "Japan",
+   "x": 867.8,
+   "y": 131.1,
+   "institutions": [
+    "Tohoku University"
+   ],
+   "people": [
+    "E. Ohtani",
+    "T. Sakamaki",
+    "A. Suzuki"
+   ],
+   "papers": 1
+  },
+  {
+   "city": "Tsukuba",
+   "country": "Japan",
+   "x": 869.3,
+   "y": 138.2,
+   "institutions": [
+    "NARO / National Institute of Animal Health"
+   ],
+   "people": [
+    "M. Akiba",
+    "P. Goswami",
+    "K. Guruge"
+   ],
+   "papers": 3
+  },
+  {
+   "city": "Tübingen",
+   "country": "Germany",
+   "x": 522.5,
+   "y": 98.0,
+   "institutions": [
+    "University of Tübingen"
+   ],
+   "people": [
+    "D. Eul",
+    "P. Louisa Marks",
+    "M. Nowak"
+   ],
+   "papers": 1
+  },
+  {
+   "city": "Auckland",
+   "country": "New Zealand",
+   "x": 959.1,
+   "y": 376.4,
+   "institutions": [
+    "University of Auckland"
+   ],
+   "people": [
+    "S. Jason Cronin",
+    "J. Wu"
+   ],
+   "papers": 1
+  },
+  {
+   "city": "Chennai",
+   "country": "India",
+   "x": 723.9,
+   "y": 213.3,
+   "institutions": [
+    "University of Madras"
+   ],
+   "people": [
+    "P. Goswami",
+    "N. Munuswamy"
+   ],
+   "papers": 1
+  },
+  {
+   "city": "Didcot",
+   "country": "UK",
+   "x": 497.0,
+   "y": 88.4,
+   "institutions": [
+    "Diamond Light Source",
+    "ISIS, Rutherford Appleton Laboratory"
+   ],
+   "people": [
+    "R. Atwood",
+    "C. Howard"
+   ],
+   "papers": 2
+  },
+  {
+   "city": "Dunedin",
+   "country": "New Zealand",
+   "x": 927.0,
+   "y": 405.6,
+   "institutions": [
+    "University of Otago"
+   ],
+   "people": [
+    "M. Brenna",
+    "E. Califano"
+   ],
+   "papers": 1
+  },
+  {
+   "city": "Erlangen",
+   "country": "Germany",
+   "x": 527.1,
+   "y": 94.6,
+   "institutions": [
+    "Friedrich-Alexander-Universität Erlangen-Nürnberg"
+   ],
+   "people": [
+    "J. Barth",
+    "R. van Geldern"
+   ],
+   "papers": 1
+  },
+  {
+   "city": "Tokai",
+   "country": "Japan",
+   "x": 870.1,
+   "y": 137.0,
+   "institutions": [
+    "CROSS, Tokai",
+    "J-PARC / JAEA"
+   ],
+   "people": [
+    "J. Abe",
+    "A. Sano-Furukawa"
+   ],
+   "papers": 1
+  },
+  {
+   "city": "Bristol",
+   "country": "UK",
+   "x": 493.9,
+   "y": 88.8,
+   "institutions": [
+    "University of Bristol"
+   ],
+   "people": [
+    "R. Brooker"
+   ],
+   "papers": 1
+  },
+  {
+   "city": "Catania",
+   "country": "Italy",
+   "x": 539.7,
+   "y": 133.5,
+   "institutions": [
+    "INGV Osservatorio Etneo"
+   ],
+   "people": [
+    "G. La Spina"
+   ],
+   "papers": 1
+  },
+  {
+   "city": "Colombo",
+   "country": "Sri Lanka",
+   "x": 723.9,
+   "y": 233.4,
+   "institutions": [
+    "Atomic Energy Authority of Sri Lanka"
+   ],
+   "people": [
+    "E. Edirisinghe"
+   ],
+   "papers": 1
+  },
+  {
+   "city": "Grenoble",
+   "country": "France",
+   "x": 514.6,
+   "y": 108.6,
+   "institutions": [
+    "Institut Néel, CNRS"
+   ],
+   "people": [
+    "J. Hazemann"
+   ],
+   "papers": 1
+  },
+  {
+   "city": "Hannover",
+   "country": "Germany",
+   "x": 523.5,
+   "y": 85.9,
+   "institutions": [
+    "Leibniz University Hannover"
+   ],
+   "people": [
+    "R. Almeev"
+   ],
+   "papers": 1
+  },
+  {
+   "city": "Kandy",
+   "country": "Sri Lanka",
+   "x": 726.0,
+   "y": 232.2,
+   "institutions": [
+    "National Institute of Fundamental Studies"
+   ],
+   "people": [
+    "C. Dissanayake"
+   ],
+   "papers": 1
+  },
+  {
+   "city": "Kuliyapitiya",
+   "country": "Sri Lanka",
+   "x": 724.3,
+   "y": 231.6,
+   "institutions": [
+    "Wayamba University of Sri Lanka"
+   ],
+   "people": [
+    "S. Wijesekara"
+   ],
+   "papers": 1
+  },
+  {
+   "city": "Milan",
+   "country": "Italy",
+   "x": 523.3,
+   "y": 107.6,
+   "institutions": [
+    "University of Milano-Bicocca"
+   ],
+   "people": [
+    "A. Fabbrizio"
+   ],
+   "papers": 1
+  },
+  {
+   "city": "Munich",
+   "country": "Germany",
+   "x": 528.8,
+   "y": 99.2,
+   "institutions": [
+    "LMU Munich"
+   ],
+   "people": [
+    "D. Bruce Dingwell"
+   ],
+   "papers": 2
+  },
+  {
+   "city": "Okayama",
+   "country": "Japan",
+   "x": 855.2,
+   "y": 142.8,
+   "institutions": [
+    "Okayama University"
+   ],
+   "people": [
+    "H. Terasaki"
+   ],
+   "papers": 1
+  },
+  {
+   "city": "Paris",
+   "country": "France",
+   "x": 506.0,
+   "y": 97.0,
+   "institutions": [
+    "IMPMC, Sorbonne Université"
+   ],
+   "people": [
+    "S. Dominijanni"
+   ],
+   "papers": 1
+  },
+  {
+   "city": "Prague",
+   "country": "Czechia",
+   "x": 535.3,
+   "y": 93.0,
+   "institutions": [
+    "Charles University"
+   ],
+   "people": [
+    "E. Michailidou"
+   ],
+   "papers": 1
+  },
+  {
+   "city": "Turin",
+   "country": "Italy",
+   "x": 519.5,
+   "y": 109.0,
+   "institutions": [
+    "University of Turin"
+   ],
+   "people": [
+    "M. Cassetta"
+   ],
+   "papers": 1
+  },
+  {
+   "city": "Utrecht",
+   "country": "Netherlands",
+   "x": 512.5,
+   "y": 86.8,
+   "institutions": [
+    "Utrecht University"
+   ],
+   "people": [
+    "L. Eberhard"
+   ],
+   "papers": 1
+  }
+ ]
+}

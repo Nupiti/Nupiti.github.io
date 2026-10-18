@@ -197,7 +197,15 @@
           <span class="eyebrow">People</span>
           <h2>Everyone I have published with</h2>
         </div>
-        <p class="quiet small" style="max-width:34ch; margin:0;"><strong id="coauthorCount" style="color:var(--ink-strong)">—</strong> co-authors across <span id="coauthorPapers">16</span> papers. Larger circles have worked with me more often; point at one to see who it is. Built from the publication list, so it grows by itself.</p>
+        <p class="quiet small" style="max-width:34ch; margin:0;" id="coauthorLede"><strong id="coauthorCount" style="color:var(--ink-strong)">—</strong> co-authors across <span id="coauthorPapers">16</span> papers. Larger circles have worked with me more often; point at one to see who it is. Built from the publication list, so it grows by itself.</p>
+      </div>
+      <div class="viewtabs" role="tablist" aria-label="People or places">
+        <button type="button" class="viewtab is-on" data-view="net">People</button>
+        <button type="button" class="viewtab" data-view="map">Places</button>
+        <span class="viewtabs__zoom" hidden>
+          <button type="button" class="viewtab viewtab--sm is-on" data-zoom="world">World</button>
+          <button type="button" class="viewtab viewtab--sm" data-zoom="europe">Europe</button>
+        </span>
       </div>
       <div class="graphic" id="coauthorNet">
         <div class="graphic__legend">
@@ -205,6 +213,9 @@
           <span><i style="background:#b4a48c"></i>Three or more papers together</span>
           <span><i style="background:#6f655a"></i>One or two</span>
         </div>
+      </div>
+      <div class="graphic graphic--map" id="coauthorMap" hidden>
+        <div class="graphic__legend" id="coauthorMapLegend"></div>
       </div>
     </div>
   </section>
