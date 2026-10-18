@@ -160,7 +160,7 @@
       "tag": "Publication",
       "title": "Sulphur content at sulphide saturation of peridotite melt at upper-mantle conditions",
       "body": "How much sulphur a mantle melt can hold before a sulphide liquid separates from it, measured in multi-anvil experiments. The number decides whether sulphur — and the metals that follow it — stays behind in the mantle or travels with the melt. American Mineralogist.",
-      "image": "fig-sulphur-core.jpg",
+      "image": "fig-scss.jpg",
       "link": "https://doi.org/10.2138/am-2021-7649",
       "linkText": "Read the paper"
     },
@@ -169,9 +169,9 @@
       "tag": "Beamtime",
       "title": "In situ neutron diffraction at J-PARC PLANET",
       "body": "Six days on BL11 PLANET at the Materials and Life Science Experimental Facility of J-PARC, Japan, the only beamline where a six-axis multi-anvil press (ATSUHIME) sits in a pulsed neutron beam from a spallation source. Hydrogen is almost invisible to X-rays but scatters neutrons strongly, so neutron diffraction is the one way to see where it sits in a crystal structure, and the collimation of the PLANET beam keeps the background low enough to work with deuterium's incoherent scattering. A pellet of FeS was packed in an NaCl capsule between pellets of ND3BD3, which released deuterium on heating, inside a graphite furnace and a Cr-doped MgO cubic cell. Time-of-flight powder patterns were collected at about 3, 7 and 11 GPa and 600–1400 K, with empty-cell runs for background subtraction. Rietveld refinement of the patterns gave the site and occupancy of deuterium in the NiAs-type FeS structure and the volume expansion on hydrogenation, and the recovered samples showed how little of it survives the quench. With D. J. Frost, T. Boffa Ballaran and A. Kurnosov (Bayreuth), H. Terasaki, T. Sakamaki, A. Suzuki and E. Ohtani (Tohoku), and A. Sano-Furukawa and J. Abe (J-PARC). Proposal 2019B.",
-      "image": "fig-jparc-rietveld.jpg",
-      "link": "https://j-parc.jp/c/en/",
-      "linkText": "About J-PARC"
+      "image": "note-jparc.jpg",
+      "link": "https://j-parc.jp/c/en/photo_gallery/2025/05/the-six-axis-multi-anvil-press-atsuhime-installed-in-bl11-planet3-037.html",
+      "linkText": "ATSUHIME, at J-PARC"
     },
     {
       "date": "2016 – 2017",
