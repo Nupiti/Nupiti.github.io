@@ -37,6 +37,77 @@
     window.addEventListener('scroll', onScroll, { passive: true });
   }
 
+  /* ======================================================================
+     SECTION BAR — a slim sticky row of jump links under the header.
+     Used by Research and Life (sections marked data-nav="Label"),
+     Publications (one chip per year) and Photography (one per album).
+     ====================================================================== */
+  function setHdr() { if (header) document.documentElement.style.setProperty('--hdr', header.offsetHeight + 'px'); }
+  setHdr(); window.addEventListener('resize', setHdr);
+  function hdrOff() { return (header ? header.offsetHeight : 64) + 56; }
+  function goTo(t) {
+    window.scrollTo({ top: t.getBoundingClientRect().top + window.scrollY - hdrOff(), behavior: 'smooth' });
+    /* images above may still be settling; correct the landing once the scroll has finished */
+    var n = 0, iv = setInterval(function () {
+      var d = t.getBoundingClientRect().top - hdrOff();
+      n++; if (n > 3 && Math.abs(d) > 6) window.scrollTo({ top: window.scrollY + d, behavior: 'auto' });
+      if (n > 8) clearInterval(iv);
+    }, 220);
+  }
+  function sectionBar(opts) {
+    var items = (opts.items || []).filter(function (i) { return i.id && document.getElementById(i.id); });
+    if (items.length < 3) return null;
+    var bar = document.createElement('nav');
+    bar.className = 'secbar'; bar.setAttribute('aria-label', opts.label || 'On this page');
+    bar.innerHTML = '<div class="wrap wrap--wide secbar__row"><div class="secbar__inner">' +
+      items.map(function (i) { return '<a href="#' + esc(i.id) + '">' + esc(i.label) + '</a>'; }).join('') +
+      '</div><button class="secbar__top" type="button" aria-label="Back to top" title="Back to top">↑</button></div>' +
+      '<span class="secbar__progress" aria-hidden="true"></span>';
+    document.body.appendChild(bar);
+    var inner = bar.querySelector('.secbar__inner'), prog = bar.querySelector('.secbar__progress');
+    var links = {}; inner.querySelectorAll('a').forEach(function (a) { links[a.getAttribute('href').slice(1)] = a; });
+    var current = null, lastId = items[items.length - 1].id;
+    var els = items.map(function (i) { return document.getElementById(i.id); });
+    function setHere(id) {
+      if (id === current) return; current = id;
+      Object.keys(links).forEach(function (k) { links[k].classList.toggle('is-here', k === id); });
+      if (opts.onActive) opts.onActive(id);
+      var a = links[id]; if (a) inner.scrollTo({ left: a.offsetLeft - inner.clientWidth / 2 + a.offsetWidth / 2, behavior: 'smooth' });
+    }
+    function onScroll() {
+      var h = document.documentElement.scrollHeight - window.innerHeight;
+      prog.style.transform = 'scaleX(' + (h > 0 ? Math.min(1, window.scrollY / h) : 0) + ')';
+      var trig = opts.trigger;
+      bar.classList.toggle('is-on', trig ? trig.getBoundingClientRect().bottom < (header ? header.offsetHeight : 0) : window.scrollY > 400);
+      /* the active chip is the last section whose top has passed just under the bar */
+      var line = hdrOff() + 24, here = null;
+      if (h > 0 && window.scrollY >= h - 4) here = lastId;
+      else for (var k = 0; k < els.length; k++) { if (els[k].getBoundingClientRect().top <= line) here = els[k].id; else break; }
+      setHere(here);
+    }
+    window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+    function toTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); history.replaceState(null, '', location.pathname + location.search); }
+    bar.querySelector('.secbar__top').addEventListener('click', toTop);
+    [bar].concat(opts.extra || []).forEach(function (nav) {
+      if (!nav) return;
+      nav.addEventListener('click', function (e) {
+        var a = e.target.closest('a[href^="#"]'); if (!a) return;
+        var id = a.getAttribute('href').slice(1), t = document.getElementById(id); if (!t || !links[id]) return;
+        e.preventDefault();
+        if (nav === bar && id === current) { toTop(); return; }   /* the active chip again: back to the top */
+        goTo(t); history.replaceState(null, '', '#' + id);
+      });
+    });
+    var hash = location.hash.slice(1);
+    if (hash && links[hash]) setTimeout(function () { goTo(document.getElementById(hash)); }, 300);
+    return bar;
+  }
+  function autoBar(trigger) {
+    var secs = document.querySelectorAll('[data-nav]');
+    return sectionBar({ trigger: trigger, items: [].map.call(secs, function (s) { return { id: s.id, label: s.getAttribute('data-nav') }; }) });
+  }
+  if (!document.getElementById('pubArchive') && !document.getElementById('gallery')) autoBar(document.querySelector('.page-head'));
+
   /* ---- Reveal on scroll -------------------------------------------------- */
   var revealables = document.querySelectorAll('.section, .theme-block, .session');
   if ('IntersectionObserver' in window && revealables.length) {
@@ -144,7 +215,14 @@
       }
       if (archiveRoot) {
         var sorted = papers.slice().sort(function (a, b) { return (b.year || 0) - (a.year || 0); });
-        archiveRoot.innerHTML = '<ul class="pub-list">' + sorted.map(paperHTML).join('') + '</ul>';
+        var years = [], byYear = {};
+        sorted.forEach(function (p) { var y = p.year || 'Undated'; if (!byYear[y]) { byYear[y] = []; years.push(y); } byYear[y].push(p); });
+        archiveRoot.innerHTML = years.map(function (y) {
+          return '<div class="pub-year" id="year-' + esc(String(y).toLowerCase()) + '" data-nav="' + esc(y) + '">' +
+            '<h3 class="pub-year__h">' + esc(y) + '</h3><ul class="pub-list">' + byYear[y].map(paperHTML).join('') + '</ul></div>';
+        }).join('');
+        if (themesRoot) themesRoot.setAttribute('data-nav', 'By theme');
+        autoBar(document.querySelector('.page-head'));
         /* anything on ORCID that is not yet in publications.json appears here by itself */
         orcidWorks().then(function (works) {
           var known = {}; papers.forEach(function (p) { if (p.doi) known[p.doi.toLowerCase()] = 1; });
@@ -371,7 +449,7 @@
       }).join('');
 
       /* ---- album index: contact strip + sticky bar -------------------- */
-      var strip = document.getElementById('albumStrip'), bar = document.getElementById('albumBar');
+      var strip = document.getElementById('albumStrip');
       if (strip) {
         strip.innerHTML = sessions.map(function (s) {
           var ph = (s.photos || []).filter(function (p) { return p.pick; })[0] || (s.photos || [])[0];
@@ -380,49 +458,12 @@
             esc(s.title) + '<span class="albums__count">' + (s.photos || []).length + ' photographs</span></a>';
         }).join('');
       }
-      if (bar) {
-        var inner = bar.querySelector('.albumbar__inner');
-        inner.innerHTML = sessions.map(function (s) { return '<a href="#' + slug(s.title) + '">' + esc(s.title) + '</a>'; }).join('');
-        var hdr = document.querySelector('.site-header');
-        function setHdr() { if (hdr) document.documentElement.style.setProperty('--hdr', hdr.offsetHeight + 'px'); }
-        setHdr(); window.addEventListener('resize', setHdr);
-        if (window.IntersectionObserver) {
-          /* show the bar once the strip has scrolled away */
-          new IntersectionObserver(function (es) { bar.classList.toggle('is-on', !es[0].isIntersecting && es[0].boundingClientRect.top < 0); }).observe(strip || galleryRoot);
-          /* highlight the album in view */
-          var links = {}; inner.querySelectorAll('a').forEach(function (a) { links[a.getAttribute('href').slice(1)] = a; });
-          var stripLinks = {}; if (strip) strip.querySelectorAll('a').forEach(function (a) { stripLinks[a.getAttribute('href').slice(1)] = a; });
-          var io = new IntersectionObserver(function (es) {
-            es.forEach(function (e) {
-              if (!e.isIntersecting) return;
-              var id = e.target.id;
-              Object.keys(links).forEach(function (k) { links[k].classList.toggle('is-here', k === id); if (stripLinks[k]) stripLinks[k].classList.toggle('is-here', k === id); });
-              var a = links[id]; if (a) inner.scrollTo({ left: a.offsetLeft - inner.clientWidth / 2 + a.offsetWidth / 2, behavior: 'smooth' });
-            });
-          }, { rootMargin: '-45% 0px -50% 0px' });
-          galleryRoot.querySelectorAll('.session').forEach(function (sec) { io.observe(sec); });
-        }
-      }
-      function goTo(t) {
-        function off() { var h = document.querySelector('.site-header'); return (h ? h.offsetHeight : 64) + 56; }
-        window.scrollTo({ top: t.getBoundingClientRect().top + window.scrollY - off(), behavior: 'smooth' });
-        /* photos above may still be settling; correct the landing once the scroll has finished */
-        var n = 0, iv = setInterval(function () {
-          var d = t.getBoundingClientRect().top - off();
-          n++; if (n > 3 && Math.abs(d) > 6) window.scrollTo({ top: window.scrollY + d, behavior: 'auto' });
-          if (n > 8) clearInterval(iv);
-        }, 220);
-      }
-      [strip, bar].forEach(function (nav) {
-        if (!nav) return;
-        nav.addEventListener('click', function (e) {
-          var a = e.target.closest('a[href^="#album-"]'); if (!a) return;
-          var t = document.getElementById(a.getAttribute('href').slice(1)); if (!t) return;
-          e.preventDefault(); goTo(t);
-          history.replaceState(null, '', a.getAttribute('href'));
-        });
+      var stripLinks = {}; if (strip) strip.querySelectorAll('a').forEach(function (a) { stripLinks[a.getAttribute('href').slice(1)] = a; });
+      sectionBar({
+        label: 'Albums', trigger: strip || galleryRoot, extra: [strip],
+        items: sessions.map(function (s) { return { id: slug(s.title), label: s.title }; }),
+        onActive: function (id) { Object.keys(stripLinks).forEach(function (k) { stripLinks[k].classList.toggle('is-here', k === id); }); }
       });
-      if (location.hash.indexOf('#album-') === 0) { var tgt = document.getElementById(location.hash.slice(1)); if (tgt) setTimeout(function () { goTo(tgt); }, 300); }
 
       relayoutAll();
       document.dispatchEvent(new Event('gallery:ready'));

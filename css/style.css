@@ -829,12 +829,20 @@ a.theme-card:hover .theme-card__media img { transform: scale(1.04); }
 .albums__item.is-here { color: var(--ink-strong); }
 .albums__item.is-here img { filter: none; outline-color: var(--ember); }
 .albums__count { display: block; color: var(--ink-faint); font-size: 0.7rem; margin-top: 0.1rem; }
-.albumbar { position: sticky; top: var(--hdr, 64px); z-index: 55; background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--hairline-soft); opacity: 0; transform: translateY(-6px); pointer-events: none; transition: opacity 0.3s var(--ease), transform 0.3s var(--ease); }
-.albumbar[hidden] { display: block; }
-.albumbar.is-on { opacity: 1; transform: none; pointer-events: auto; }
-.albumbar__inner { display: flex; gap: 0.35rem; overflow-x: auto; padding-block: 0.55rem; scrollbar-width: none; }
-.albumbar__inner::-webkit-scrollbar { display: none; }
-.albumbar a { flex: none; font-size: var(--t-xs); letter-spacing: 0.03em; padding: 0.35rem 0.8rem; border-radius: 999px; color: var(--ink-quiet); text-decoration: none; border: 1px solid transparent; transition: color 0.2s, border-color 0.2s, background 0.2s; }
-.albumbar a:hover { color: var(--ink-strong); border-color: var(--hairline); }
-.albumbar a.is-here { color: var(--bg); background: var(--ink-strong); }
-#gallery .session { scroll-margin-top: calc(var(--hdr, 64px) + 3.4rem); }
+/* section bar: jump links under the header on long pages (built in main.js) */
+.secbar { position: fixed; left: 0; right: 0; top: var(--hdr, 64px); z-index: 55; background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--hairline-soft); opacity: 0; transform: translateY(-6px); pointer-events: none; transition: opacity 0.3s var(--ease), transform 0.3s var(--ease); }
+.secbar.is-on { opacity: 1; transform: none; pointer-events: auto; }
+.secbar__row { display: flex; align-items: center; gap: 0.5rem; }
+.secbar__inner { position: relative; flex: 1; min-width: 0; display: flex; gap: 0.35rem; overflow-x: auto; padding-block: 0.55rem; scrollbar-width: none; -webkit-mask-image: linear-gradient(to right, transparent, #000 0.8rem, #000 calc(100% - 1.6rem), transparent); mask-image: linear-gradient(to right, transparent, #000 0.8rem, #000 calc(100% - 1.6rem), transparent); padding-inline: 0.6rem 1.4rem; }
+.secbar__inner::-webkit-scrollbar { display: none; }
+.secbar a { flex: none; font-size: var(--t-xs); letter-spacing: 0.03em; padding: 0.35rem 0.8rem; border-radius: 999px; color: var(--ink-quiet); text-decoration: none; border: 1px solid transparent; transition: color 0.2s, border-color 0.2s, background 0.2s; }
+.secbar a:hover { color: var(--ink-strong); border-color: var(--hairline); }
+.secbar a.is-here { color: var(--bg); background: var(--ink-strong); }
+.secbar__top { flex: none; width: 2rem; height: 2rem; border-radius: 50%; border: 1px solid var(--hairline); background: transparent; color: var(--ink-quiet); font: inherit; font-size: 0.95rem; line-height: 1; cursor: pointer; transition: color 0.2s, border-color 0.2s; }
+.secbar__top:hover, .secbar__top:focus-visible { color: var(--ember); border-color: var(--ember); outline: none; }
+.secbar__progress { position: absolute; left: 0; right: 0; bottom: -1px; height: 2px; background: var(--ember); transform: scaleX(0); transform-origin: left; pointer-events: none; }
+[data-nav], #gallery .session { scroll-margin-top: calc(var(--hdr, 64px) + 3.4rem); }
+.pub-year__h { font-size: var(--t-lg); color: var(--ink-quiet); margin: 2.2rem 0 0.2rem; font-variant-numeric: tabular-nums; }
+.pub-year:first-child .pub-year__h { margin-top: 0; }
+@media (max-width: 760px) { .has-descent .secbar__progress { display: none; } .secbar__top { width: 1.8rem; height: 1.8rem; } }
+@media (prefers-reduced-motion: reduce) { .secbar { transition: none; } }
