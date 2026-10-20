@@ -65,7 +65,8 @@
   }
   /* file "x.jpg" -> small variant "x-s.jpg" (made by tools/add-photos.py) */
   function small(file) { return file.replace(/\.jpg$/i, '-s.jpg'); }
-  function srcset(file) { return IMG + small(file) + ' 900w, ' + IMG + file + ' 2000w'; }
+  function srcset(file, v) { var q = v ? '?v=' + v : ''; return IMG + small(file) + q + ' 900w, ' + IMG + file + q + ' 2000w'; }
+  function vq(ph) { return ph && ph.v ? '?v=' + ph.v : ''; }  /* bump "v" on a photo in photos.json after editing it, so browsers fetch the new file */
 
 
   /* ORCID public record -> [{doi,title,journal,year,authors}] (cached in the browser for a day) */
@@ -340,14 +341,14 @@
         var rest = photos.filter(function (p) { return !p.pick; });
 
         function register(ph) {
-          lightboxItems.push({ src: IMG + ph.file, caption: ph.caption || '', place: s.title + (s.place ? ' · ' + s.place : '') });
+          lightboxItems.push({ src: IMG + ph.file + vq(ph), caption: ph.caption || '', place: s.title + (s.place ? ' · ' + s.place : '') });
           return lightboxItems.length - 1;
         }
         var featureHTML = picks.map(function (ph) {
           var idx = register(ph);
           var d = dims[ph.file] || [2000, 1325];
           return '<button class="feature" data-lb="' + idx + '" aria-label="' + esc(ph.caption || 'Photograph') + '">' +
-            '<img src="' + IMG + esc(small(ph.file)) + '" srcset="' + esc(srcset(ph.file)) + '" sizes="(min-width: 1312px) 1248px, 94vw" width="' + d[0] + '" height="' + d[1] + '" alt="' + esc(ph.caption || '') + '" loading="lazy">' +
+            '<img src="' + IMG + esc(small(ph.file)) + vq(ph) + '" srcset="' + esc(srcset(ph.file, ph.v)) + '" sizes="(min-width: 1312px) 1248px, 94vw" width="' + d[0] + '" height="' + d[1] + '" alt="' + esc(ph.caption || '') + '" loading="lazy">' +
             '<span class="feature__cap"><strong>' + esc(ph.caption || '') + '</strong><span>' + esc(s.place || '') + '</span></span>' +
             '</button>';
         }).join('');
@@ -356,7 +357,7 @@
           var d = dims[ph.file] || [3, 2];
           var ar = d[0] / d[1];
           return '<button class="shot" data-lb="' + idx + '" data-ar="' + ar.toFixed(4) + '" aria-label="' + esc(ph.caption || 'Photograph') + '" style="aspect-ratio:' + ar.toFixed(4) + '">' +
-            '<img src="' + IMG + esc(small(ph.file)) + '" srcset="' + esc(srcset(ph.file)) + '" sizes="(min-width: 900px) 30vw, 50vw" width="' + d[0] + '" height="' + d[1] + '" alt="' + esc(ph.caption || '') + '" loading="lazy">' +
+            '<img src="' + IMG + esc(small(ph.file)) + vq(ph) + '" srcset="' + esc(srcset(ph.file, ph.v)) + '" sizes="(min-width: 900px) 30vw, 50vw" width="' + d[0] + '" height="' + d[1] + '" alt="' + esc(ph.caption || '') + '" loading="lazy">' +
             (ph.caption ? '<span class="shot__cap">' + esc(ph.caption) + '</span>' : '') +
             '</button>';
         }).join('') + '</div>' : '';

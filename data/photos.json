@@ -3,7 +3,8 @@
     "This is the only file you edit to change the gallery.",
     "Web-ready images live in images/web/ (made by tools/add-photos.py from your originals).",
     "A session is a story, not a place. \"pick\": true makes a photo the large one at the top.",
-    "Caption convention: a short descriptive phrase, no final full stop, place last after a comma."
+    "Caption convention: a short descriptive phrase, no final full stop, place last after a comma.",
+    "After replacing a photo file, add or raise \"v\" on it (e.g. \"v\": 3) so visitors' browsers load the new version instead of a cached one."
   ],
   "sessions": [
     {
@@ -626,7 +627,8 @@
         },
         {
           "file": "stone-37.jpg",
-          "caption": "Walking past the paintings of Venice, in Venice"
+          "caption": "Walking past the paintings of Venice, in Venice",
+          "v": 2
         },
         {
           "file": "stone-38.jpg",
@@ -642,7 +644,8 @@
         },
         {
           "file": "stone-44.jpg",
-          "caption": "A street in Blois"
+          "caption": "A street in Blois",
+          "v": 2
         },
         {
           "file": "stone-45.jpg",
@@ -742,7 +745,8 @@
         },
         {
           "file": "sea-14.jpg",
-          "caption": "Dancing the sun down, on the ramparts of Alghero"
+          "caption": "Dancing the sun down, on the ramparts of Alghero",
+          "v": 2
         },
         {
           "file": "sea-15.jpg",
@@ -774,7 +778,8 @@
         },
         {
           "file": "sea-23.jpg",
-          "caption": "Alone on the jetty, by choice"
+          "caption": "Alone on the jetty, by choice",
+          "v": 2
         }
       ]
     },
