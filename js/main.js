@@ -328,6 +328,8 @@
     });
   }
 
+  function slug(t) { return 'album-' + String(t).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''); }
+
   if (galleryRoot) {
     Promise.all([getJSON('data/photos.json'), getJSON(IMG + '_dims.json').catch(function () { return {}; })])
     .then(function (res) {
@@ -362,11 +364,65 @@
             '</button>';
         }).join('') + '</div>' : '';
 
-        return '<section class="session">' +
+        return '<section class="session" id="' + slug(s.title) + '">' +
           '<div class="session__head"><h2>' + esc(s.title) + '</h2></div>' +
           (s.note ? '<p class="session__note">' + esc(s.note) + '</p>' : '') +
           featureHTML + gridHTML + '</section>';
       }).join('');
+
+      /* ---- album index: contact strip + sticky bar -------------------- */
+      var strip = document.getElementById('albumStrip'), bar = document.getElementById('albumBar');
+      if (strip) {
+        strip.innerHTML = sessions.map(function (s) {
+          var ph = (s.photos || []).filter(function (p) { return p.pick; })[0] || (s.photos || [])[0];
+          if (!ph) return '';
+          return '<a class="albums__item" href="#' + slug(s.title) + '"><img src="' + IMG + esc(small(ph.file)) + vq(ph) + '" alt="" loading="lazy">' +
+            esc(s.title) + '<span class="albums__count">' + (s.photos || []).length + ' photographs</span></a>';
+        }).join('');
+      }
+      if (bar) {
+        var inner = bar.querySelector('.albumbar__inner');
+        inner.innerHTML = sessions.map(function (s) { return '<a href="#' + slug(s.title) + '">' + esc(s.title) + '</a>'; }).join('');
+        var hdr = document.querySelector('.site-header');
+        function setHdr() { if (hdr) document.documentElement.style.setProperty('--hdr', hdr.offsetHeight + 'px'); }
+        setHdr(); window.addEventListener('resize', setHdr);
+        if (window.IntersectionObserver) {
+          /* show the bar once the strip has scrolled away */
+          new IntersectionObserver(function (es) { bar.classList.toggle('is-on', !es[0].isIntersecting && es[0].boundingClientRect.top < 0); }).observe(strip || galleryRoot);
+          /* highlight the album in view */
+          var links = {}; inner.querySelectorAll('a').forEach(function (a) { links[a.getAttribute('href').slice(1)] = a; });
+          var stripLinks = {}; if (strip) strip.querySelectorAll('a').forEach(function (a) { stripLinks[a.getAttribute('href').slice(1)] = a; });
+          var io = new IntersectionObserver(function (es) {
+            es.forEach(function (e) {
+              if (!e.isIntersecting) return;
+              var id = e.target.id;
+              Object.keys(links).forEach(function (k) { links[k].classList.toggle('is-here', k === id); if (stripLinks[k]) stripLinks[k].classList.toggle('is-here', k === id); });
+              var a = links[id]; if (a) inner.scrollTo({ left: a.offsetLeft - inner.clientWidth / 2 + a.offsetWidth / 2, behavior: 'smooth' });
+            });
+          }, { rootMargin: '-45% 0px -50% 0px' });
+          galleryRoot.querySelectorAll('.session').forEach(function (sec) { io.observe(sec); });
+        }
+      }
+      function goTo(t) {
+        function off() { var h = document.querySelector('.site-header'); return (h ? h.offsetHeight : 64) + 56; }
+        window.scrollTo({ top: t.getBoundingClientRect().top + window.scrollY - off(), behavior: 'smooth' });
+        /* photos above may still be settling; correct the landing once the scroll has finished */
+        var n = 0, iv = setInterval(function () {
+          var d = t.getBoundingClientRect().top - off();
+          n++; if (n > 3 && Math.abs(d) > 6) window.scrollTo({ top: window.scrollY + d, behavior: 'auto' });
+          if (n > 8) clearInterval(iv);
+        }, 220);
+      }
+      [strip, bar].forEach(function (nav) {
+        if (!nav) return;
+        nav.addEventListener('click', function (e) {
+          var a = e.target.closest('a[href^="#album-"]'); if (!a) return;
+          var t = document.getElementById(a.getAttribute('href').slice(1)); if (!t) return;
+          e.preventDefault(); goTo(t);
+          history.replaceState(null, '', a.getAttribute('href'));
+        });
+      });
+      if (location.hash.indexOf('#album-') === 0) { var tgt = document.getElementById(location.hash.slice(1)); if (tgt) setTimeout(function () { goTo(tgt); }, 300); }
 
       relayoutAll();
       document.dispatchEvent(new Event('gallery:ready'));
